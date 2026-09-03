@@ -868,14 +868,27 @@
           <div class="ledgerCard ticked">
             <div class="lc-stampWrap stampGraphic">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <defs><path id="circ1" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"/></defs>
+                <defs>
+                  <path id="brandstamp_top" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0"/>
+                  <path id="brandstamp_bot" d="M 100,100 m 78,0 a 78,78 0 1,1 -156,0"/>
+                </defs>
                 <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="1.2"/>
                 <circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="1"/>
-                <text font-family="Courier Prime, monospace" font-size="10.5" fill="currentColor" letter-spacing="2.5">
-                  <textPath href="#circ1" startOffset="2%">THE LEDGER · RECORDED FROM EXPERIENCE ·</textPath>
-                </text>
-                <text x="100" y="96" text-anchor="middle" font-family="Libre Caslon Display, serif" font-size="13" fill="currentColor">SINCE</text>
-                <text x="100" y="118" text-anchor="middle" font-family="Libre Caslon Display, serif" font-size="22" fill="currentColor">1982</text>
+                <text font-family="Libre Caslon Display, serif" font-size="13.5" fill="currentColor" letter-spacing="4"><textPath href="#brandstamp_top" startOffset="50%" text-anchor="middle">THE LEDGER</textPath></text>
+                <text font-family="Courier Prime, monospace" font-size="9.5" fill="currentColor" letter-spacing="2.5"><textPath href="#brandstamp_bot" startOffset="50%" text-anchor="middle">RECORDED FROM EXPERIENCE</textPath></text>
+                <line x1="30" y1="100" x2="46" y2="100" stroke="currentColor" stroke-width="1"/>
+                <text x="38" y="94" text-anchor="middle" font-family="Courier Prime, monospace" font-size="8" fill="currentColor">SINCE</text>
+                <text x="38" y="115" text-anchor="middle" font-family="Courier Prime, monospace" font-size="8" fill="currentColor">1982</text>
+                <line x1="154" y1="100" x2="170" y2="100" stroke="currentColor" stroke-width="1"/>
+                <text x="162" y="94" text-anchor="middle" font-family="Courier Prime, monospace" font-size="7" fill="currentColor">STILL</text>
+                <text x="162" y="115" text-anchor="middle" font-family="Courier Prime, monospace" font-size="7" fill="currentColor">GOING</text>
+                <g stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M90,128 Q100,134 110,128 L108,138 Q100,141 92,138 Z"/>
+                  <line x1="100" y1="128" x2="100" y2="120"/>
+                  <path d="M100,120 C94,106 96,88 112,72 C116,88 112,106 100,120 Z"/>
+                  <path d="M100,120 C102,106 104,92 112,72"/>
+                  <path d="M100,113 L108,108 M99,104 L109,97 M99,95 L110,86"/>
+                </g>
               </svg>
             </div>
             <div class="lc-head">

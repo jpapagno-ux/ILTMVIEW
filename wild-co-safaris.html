@@ -731,7 +731,7 @@
   .agentSteps{margin-top:22px; display:flex; flex-direction:column; gap:0;}
   .agentSteps .st{display:flex; gap:16px; padding:14px 0; border-top:var(--rule);}
   .agentSteps .st:last-child{border-bottom:var(--rule);}
-  .agentSteps .st .sn{font-family:var(--mono); font-size:11px; color:var(--oxblood); flex:none; width:22px;}
+  .agentSteps .st .sn{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--oxblood); flex:none; width:72px;}
   .agentSteps .st .sd b{display:block; font-family:var(--serif); font-weight:700; font-size:14px; color:var(--charcoal); margin-bottom:2px;}
   .agentSteps .st .sd span{font-size:13.5px; color:#3f3f3f;}
 
@@ -814,6 +814,83 @@
     .tAgentGrid{grid-template-columns:1fr;}
   }
 
+
+  /* ================= MANIFEST TABLE (cargo-manifest style) ================= */
+  .manifest{border:var(--rule-strong); margin-top:20px;}
+  .manifest .mHead{
+    display:flex; justify-content:space-between; padding:10px 16px; border-bottom:var(--rule-strong);
+    font-family:var(--mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--clay);
+    background:var(--paper-2);
+  }
+  .manifest table{width:100%; border-collapse:collapse; font-family:var(--mono); font-size:12px;}
+  .manifest th{
+    text-align:left; padding:8px 16px; border-bottom:1px solid rgba(43,43,43,0.25);
+    font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--clay); font-weight:400;
+  }
+  .manifest td{padding:9px 16px; border-bottom:1px solid rgba(43,43,43,0.12); color:var(--charcoal);}
+  .manifest tr:last-child td{border-bottom:none;}
+  .manifest .mFoot{padding:9px 16px; font-family:var(--display); font-style:italic; font-size:12px; color:var(--clay); border-top:var(--rule-strong);}
+
+  /* ================= ENHANCED DOSSIER CARD ================= */
+  .dossier{background:var(--paper-2); border:1.4px solid var(--charcoal); padding:34px; position:relative;}
+  .dossier .d-topline{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px; gap:20px;}
+  .dossier .d-entry{font-family:var(--mono); font-size:11px; letter-spacing:0.1em; color:var(--oxblood); border:1px solid var(--oxblood); padding:3px 9px; display:inline-block;}
+  .dossier .d-status{font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--clay); margin-top:6px;}
+  .dossier .d-title{font-size:30px; margin-bottom:4px;}
+  .dossier .d-loc{font-family:var(--mono); font-size:11.5px; color:var(--clay); margin-bottom:20px;}
+  .dossier .d-fields{display:grid; grid-template-columns:repeat(5,1fr); gap:14px; border-top:var(--rule); border-bottom:var(--rule); padding:16px 0; margin-bottom:22px;}
+  .dossier .d-fields div{font-family:var(--mono); font-size:9.5px; letter-spacing:0.04em; color:var(--clay); text-transform:uppercase;}
+  .dossier .d-fields b{display:block; font-family:var(--serif); font-weight:700; font-size:13px; color:var(--charcoal); text-transform:none; margin-top:3px;}
+  .dossier .d-why{margin-bottom:20px;}
+  .dossier .d-why .lbl{font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--oxblood); margin-bottom:8px;}
+  .dossier .d-why p{margin:0; font-family:var(--display); font-style:italic; font-size:16px; line-height:1.55; color:var(--charcoal);}
+  .dossier .d-notes{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:20px;}
+  .dossier .d-notes .lbl{font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--clay); margin-bottom:8px;}
+  .dossier .d-notes ul{margin:0; padding-left:16px; font-size:13px; color:#3a3a3a;}
+  .dossier .d-notes li{margin-bottom:5px;}
+  .dossier .d-notfor{
+    background:var(--paper); border-left:2.5px solid var(--oxblood); padding:14px 18px;
+    font-size:13px; color:#3a3a3a; margin-bottom:20px;
+  }
+  .dossier .d-archive{display:flex; gap:8px;}
+  .dossier .d-archive .th{
+    flex:1; aspect-ratio:1; background:repeating-linear-gradient(135deg, rgba(43,43,43,0.08) 0 2px, transparent 2px 10px), var(--sand);
+    border:1px solid rgba(43,43,43,0.25); display:flex; align-items:center; justify-content:center;
+  }
+  .dossier .d-archive .th span{font-family:var(--mono); font-size:7.5px; color:var(--charcoal); opacity:0.55; text-align:center;}
+  .dossier .d-stampWrap{width:88px; height:88px; flex:none;}
+
+  /* ================= TRADER-VIEW PANEL NUMBERING ================= */
+  .panelHead{display:flex; align-items:baseline; gap:16px; margin-bottom:8px;}
+  .panelHead .pnum{font-family:var(--display); font-size:15px; color:var(--oxblood); letter-spacing:0.02em;}
+  .panelHead .plabel{font-family:var(--mono); font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--clay);}
+
+  /* ================= MINI TRAVELER PREVIEW CARD (embedded) ================= */
+  .miniPreview{border:1.4px dashed var(--sand); background:var(--paper); padding:0;}
+  .miniPreview .mp-bar{
+    display:flex; align-items:center; gap:8px; padding:10px 16px; border-bottom:1.4px dashed var(--sand);
+    font-family:var(--mono); font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--clay);
+  }
+  .miniPreview .mp-dot{width:6px; height:6px; border-radius:50%; background:var(--sand);}
+  .miniPreview .mp-hero{
+    aspect-ratio:16/8; background:repeating-linear-gradient(135deg, rgba(43,43,43,0.07) 0 2px, transparent 2px 14px), var(--stone);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+  }
+  .miniPreview .mp-hero span{font-family:var(--mono); font-size:10px; color:var(--charcoal); opacity:0.55;}
+  .miniPreview .mp-body{padding:20px 22px;}
+  .miniPreview .mp-body h5{font-size:20px; margin:0 0 6px;}
+  .miniPreview .mp-body p{margin:0 0 14px; font-size:13px; color:#3f3f3f;}
+  .miniPreview .mp-cta{
+    display:inline-block; font-family:var(--mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
+    background:var(--charcoal); color:var(--paper); padding:9px 16px;
+  }
+
+  @media (max-width:880px){
+    .dossier .d-fields{grid-template-columns:1fr 1fr; gap:12px;}
+    .dossier .d-notes{grid-template-columns:1fr;}
+    .dossier .d-topline{flex-direction:column;}
+  }
+
 </style>
 </head>
 <body>
@@ -852,18 +929,18 @@
     </div>
   </section>
 
-  <!-- WHY NOW -->
+  <!-- WHY THESE PLATFORMS -->
   <section class="whyNow">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 2.0</span><span class="label">Why Now</span></div>
+      <div class="panelHead reveal"><span class="pnum">01</span><span class="plabel">Why These Platforms, Why Now</span></div>
       <div class="grid2 reveal">
         <div>
-          <h2 style="font-size:26px; margin-bottom:14px;">Safari planning consolidated around the same twelve camps.</h2>
-          <p>Most itineraries get assembled from a shared pool of operators and resold with different branding on top. The routing is templated even when the marketing isn't.</p>
+          <h2 style="font-size:26px; margin-bottom:14px;">Safari routings have consolidated around the same operator decks.</h2>
+          <p>Most itineraries advisors get back are assembled from a shared pool of camps and resold with different branding on top — the routing is templated even when the pitch isn't.</p>
         </div>
         <div>
-          <p>Wild &amp; Co Safaris exists to keep itinerary design personal — direct relationships held for decades, routes built for the traveler actually in front of us, not recycled from a shared operator deck.</p>
-          <p>Forty-four years on the ground in Africa, given a structure built for how trips get planned now.</p>
+          <p>Wild &amp; Co Safaris gives trade partners direct-relationship access to a smaller, firsthand-vetted set of camps and operators — with the reasoning behind each routing decision, not just a quote.</p>
+          <p>Forty-four years on the ground in Africa, opened up to trade for the first time in 2026.</p>
         </div>
       </div>
     </div>
@@ -872,7 +949,7 @@
   <!-- WHY IT'S DIFFERENT -->
   <section class="twoColSection">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 2.1</span><span class="label">Why It's Different</span></div>
+      <div class="panelHead"><span class="pnum">01a</span><span class="plabel">Why It's Different</span></div>
       <div class="head reveal">
         <h2>Built route by route, not pulled from a template.</h2>
         <p>Most safari itineraries are assembled from a shared pool of the same twelve camps. Ours are built from a much smaller list — one we've actually stood in.</p>
@@ -900,7 +977,7 @@
   <!-- WHAT IT OFFERS -->
   <section class="twoColSection">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 2.15</span><span class="label">What It Offers</span></div>
+      <div class="panelHead"><span class="pnum">01b</span><span class="plabel">What It Offers</span></div>
       <div class="head reveal">
         <h2>Four things, working together.</h2>
         <p>Not a fixed-departure catalogue — a planning system built around direct ground relationships.</p>
@@ -917,7 +994,7 @@
   <!-- WHO WE PARTNER WITH -->
   <section class="twoColSection" id="partner">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 2.2</span><span class="label">Hand-Selected Partners</span></div>
+      <div class="panelHead"><span class="pnum">04</span><span class="plabel">Hand-Selected Partners</span></div>
       <div class="head reveal">
         <h2>What we look for in an operator.</h2>
         <p>The bar is the same one we hold for every property in the Ledger — it just gets applied to camps, guides, and ground operations instead.</p>
@@ -946,30 +1023,108 @@
   <!-- SAMPLE LEDGER ENTRY -->
   <section class="twoColSection">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 2.3</span><span class="label">A Sample Entry</span></div>
+      <div class="panelHead reveal"><span class="pnum">02</span><span class="plabel">What Wild &amp; Co Safaris Offers — A Live Entry</span></div>
       <div class="head reveal">
         <h2>What a Wild &amp; Co Safaris dossier looks like.</h2>
-        <p>Same standard as every Ledger entry — a camp doesn't appear in an itinerary until it's earned its place in the archive.</p>
+        <p>Same standard as every Ledger entry — a camp doesn't appear in a routing until it's earned its place in the archive.</p>
       </div>
-      <div class="bioGrid reveal" style="align-items:flex-start;">
-        <div class="imgPlaceholder ticked" style="--ar:4/5;">
-          <div class="ph"><span>Photo placeholder<br>Singita Sasakwa Lodge<br>Serengeti, Tanzania</span></div>
-          <div class="cap2"><b>Singita Sasakwa Lodge</b>Heritage entry, still current</div>
+
+      <div class="dossier ticked reveal">
+        <div class="d-topline">
+          <div>
+            <div class="d-entry">ENTRY No. 052</div>
+            <div class="d-status">Under Observation</div>
+          </div>
+          <div class="lc-stampWrap d-stampWrap stampGraphic">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path id="safstamp_top" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0"/>
+                <path id="safstamp_bot" d="M 100,100 m 78,0 a 78,78 0 1,1 -156,0"/>
+              </defs>
+              <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="1.2"/>
+              <circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="1"/>
+              <text font-family="Libre Caslon Display, serif" font-size="13.5" fill="currentColor" letter-spacing="4"><textPath href="#safstamp_top" startOffset="50%" text-anchor="middle">THE LEDGER</textPath></text>
+              <text font-family="Courier Prime, monospace" font-size="9.5" fill="currentColor" letter-spacing="2.5"><textPath href="#safstamp_bot" startOffset="50%" text-anchor="middle">RECORDED FROM EXPERIENCE</textPath></text>
+              <g stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M90,128 Q100,134 110,128 L108,138 Q100,141 92,138 Z"/>
+                <line x1="100" y1="128" x2="100" y2="120"/>
+                <path d="M100,120 C94,106 96,88 112,72 C116,88 112,106 100,120 Z"/>
+                <path d="M100,120 C102,106 104,92 112,72"/>
+                <path d="M100,113 L108,108 M99,104 L109,97 M99,95 L110,86"/>
+              </g>
+            </svg>
+          </div>
         </div>
-        <div class="ledgerCard ticked">
-          <div class="lc-head">
-            <span class="lc-entry">ENTRY No. 042</span>
-            <span class="lc-status">Heritage Entry</span>
+
+        <div class="d-title">Little DumaTau</div>
+        <div class="d-loc">Linyanti Reserve, Northern Botswana — Osprey Lagoon</div>
+
+        <div class="d-fields">
+          <div>Recorded by<b>James Papagno</b></div>
+          <div>First visited<b>2023</b></div>
+          <div>Last visit<b>2025</b></div>
+          <div>Returned<b>3 times</b></div>
+          <div>Ledger Status<b>Under Observation</b></div>
+        </div>
+
+        <div class="d-why">
+          <div class="lbl">Entered into the Ledger because</div>
+          <p>Four tented suites on Osprey Lagoon, in the middle of two of the busiest elephant corridors in the Linyanti. It's the rare camp small enough to feel private while sitting on some of the best game viewing in northern Botswana — still under review until it's proven itself across more than one season.</p>
+        </div>
+
+        <div class="d-notes">
+          <div>
+            <div class="lbl">Field Notes</div>
+            <ul>
+              <li>Elephant herds cross the lagoon most mornings in the dry season</li>
+              <li>Take the barge for sunset — quieter than a drive</li>
+              <li>Shares Osprey Retreat spa and deli with sister camp DumaTau</li>
+              <li>Best window: June – October for elephant concentrations</li>
+            </ul>
           </div>
-          <div class="lc-title" style="font-size:26px;">Singita Sasakwa Lodge</div>
-          <div class="lc-loc">Serengeti, Tanzania — 2°21'S 34°49'E</div>
-          <div class="lc-rule"></div>
-          <div class="lc-rows">
-            <div>Recorded by<b>James Papagno</b></div>
-            <div>First visited<b>1998</b></div>
-            <div>Last visit<b>2025</b></div>
+          <div>
+            <div class="lbl">Practical Notes</div>
+            <ul>
+              <li>Access via light aircraft into the Linyanti Reserve</li>
+              <li>4 tented suites only — books out fast in peak season</li>
+              <li>Each tent has a private plunge pool and deck</li>
+              <li>Rate basis: full board, activities included</li>
+            </ul>
           </div>
-          <div class="lc-quote">"The migration passes below the lodge most years. We route clients here on timing, not on the brochure photo."</div>
+        </div>
+
+        <div class="d-notfor">If you want the bigger, more social energy of a larger camp, send them to sister camp DumaTau instead. Little DumaTau is quiet, small, and shares its facilities next door.</div>
+
+        <div class="manifest">
+          <div class="mHead"><span>Camp Manifest</span><span>Specification</span></div>
+          <table>
+            <tr><th>Detail</th><th>Notes</th></tr>
+            <tr><td>Suites</td><td>4, raised decks, private plunge pools</td></tr>
+            <tr><td>Shared facilities</td><td>Osprey Retreat spa, gym, deli (with DumaTau)</td></tr>
+            <tr><td>Activities</td><td>Game drives, walking safaris, barge cruises</td></tr>
+            <tr><td>Opened</td><td>2022</td></tr>
+          </table>
+          <div class="mFoot">Filed from current operator specifications — confirm live rates before quoting.</div>
+        </div>
+
+        <div class="d-archive" style="margin-top:20px;">
+          <div class="th"><span>Archive<br>image 1</span></div>
+          <div class="th"><span>Archive<br>image 2</span></div>
+          <div class="th"><span>Archive<br>image 3</span></div>
+          <div class="th"><span>Archive<br>image 4</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top:32px;">
+        <div class="panelHead reveal" style="margin-bottom:16px;"><span class="pnum">02a</span><span class="plabel">How Travelers See This Camp</span></div>
+        <div class="miniPreview reveal">
+          <div class="mp-bar"><span class="mp-dot"></span>wildcosafaris.com/camp/little-dumatau — traveler view</div>
+          <div class="mp-hero"><span>Photo placeholder — Little DumaTau hero image</span></div>
+          <div class="mp-body">
+            <h5>Little DumaTau</h5>
+            <p>Four tents, one lagoon, and some of the best elephant viewing in Botswana — routed for you because we've stood on that deck ourselves, not pulled from a shared operator list.</p>
+            <div class="mp-cta">Enquire About This Route</div>
+          </div>
         </div>
       </div>
     </div>
@@ -978,17 +1133,17 @@
   <!-- MEET SAFARI CRUX -->
   <section class="agentSection" style="background:var(--paper-2);">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 2.4</span><span class="label">The Planning Agent</span></div>
+      <div class="panelHead reveal"><span class="pnum">03</span><span class="plabel">The Planning Agent</span></div>
       <div class="agentGrid">
         <div class="reveal">
           <div class="agentBadge">Wild &amp; Co Safaris</div>
           <h3>Meet Safari Crux.</h3>
           <div class="role">The conversational planning agent for Wild &amp; Co Safaris.</div>
-          <p>Safari Crux doesn't sell fixed departures. It takes a brief — dates, priorities, who's traveling — and drafts a real multi-camp routing against the archive, ready for a human to refine and confirm on the ground.</p>
+          <p>Safari Crux doesn't sell fixed departures. It's the layer between a trade brief and a confirmed routing — built to plan, organize, and hand off an itinerary that's already taken real shape on the ground.</p>
           <div class="agentSteps">
-            <div class="st"><div class="sn">01</div><div class="sd"><b>Takes the brief</b><span>Migration timing, guiding style, privacy, pace — the things that actually shape a route.</span></div></div>
-            <div class="st"><div class="sn">02</div><div class="sd"><b>Drafts the routing</b><span>Builds a camp-by-camp itinerary from vetted entries, not a fixed package.</span></div></div>
-            <div class="st"><div class="sn">03</div><div class="sd"><b>Hands off</b><span>Passes the draft to a planning team for logistics, charters, and confirmation.</span></div></div>
+            <div class="st"><div class="sn">Plan</div><div class="sd"><b>Turns a brief into a draft routing</b><span>Takes migration timing, guiding style, and pace, then builds a camp-by-camp draft from vetted Ledger entries only.</span></div></div>
+            <div class="st"><div class="sn">Organize</div><div class="sd"><b>Sequences the itinerary</b><span>Orders legs, flags charter and transfer logistics, and keeps camp notes and guiding pairings attached throughout.</span></div></div>
+            <div class="st"><div class="sn">Folio</div><div class="sd"><b>Compiles the Travel Folio</b><span>Once the planning team confirms the route, Safari Crux assembles it into the Folio automatically — routing, guides, and notes in one place.</span></div></div>
           </div>
         </div>
         <div class="reveal">
@@ -996,7 +1151,7 @@
             <div class="cm-head"><span class="cm-dot"></span>Safari Crux — Wild &amp; Co Safaris</div>
             <div class="cm-body">
               <div class="bubble user">Two families, ten days, want the migration and real guiding — not a lodge circuit.</div>
-              <div class="bubble agent">Draft routing: Singita Sasakwa for migration timing, then a smaller owner-operated camp for the back half. Guiding held by the same two trackers both stops. Want the full itinerary?</div>
+              <div class="bubble agent">Draft routing: Little DumaTau for lagoon game viewing, then a second camp for the migration window. Same guiding team both stops. Want the full itinerary?</div>
               <div class="bubble user">Yes — send it to the folio.</div>
             </div>
             <div class="cm-foot">Image placeholder — product interface preview</div>
@@ -1009,7 +1164,7 @@
   <!-- TRAVEL FOLIO -->
   <section class="folioSection">
     <div class="wrap">
-      <div class="entry" style="margin-bottom:0;"><span class="no" style="border-color:var(--sand); color:var(--sand);">Entry No. 2.5</span><span class="label" style="color:var(--sand);">After the Trip</span></div>
+      <div class="panelHead" style="margin-bottom:0;"><span class="pnum" style="color:var(--sand);">05</span><span class="plabel" style="color:var(--sand);">After the Trip — The Travel Folio</span></div>
       <div class="head reveal" style="margin-top:24px; max-width:640px;">
         <h2>The Travel Folio.</h2>
         <p>Where the digital age meets journey design — a record built to be reopened, not filed away.</p>
@@ -1038,7 +1193,7 @@
   <!-- LAUNCHING -->
   <section class="launchBand">
     <div class="wrap">
-      <div class="entry" style="margin-bottom:0;"><span class="no" style="border-color:var(--sand); color:var(--sand);">Entry No. 2.3</span><span class="label" style="color:var(--sand);">What We're Launching</span></div>
+      <div class="panelHead" style="margin-bottom:0;"><span class="pnum" style="color:var(--sand);">06</span><span class="plabel" style="color:var(--sand);">What We're Launching</span></div>
       <div class="head reveal" style="margin-top:24px; max-width:640px;">
         <h2>Launching in 2026 — for trade and for travelers.</h2>
         <p>Three things opening up across Wild &amp; Co Safaris this year.</p>
@@ -1066,7 +1221,7 @@
   <!-- BIO -->
   <section class="bioSection">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 2.4</span><span class="label">The Advisor</span></div>
+      <div class="panelHead"><span class="pnum">07</span><span class="plabel">The Advisor</span></div>
       <div class="bioGrid">
         <div class="frame reveal">
           <div class="photo"><span>Photo placeholder<br>James Papagno</span></div>

@@ -731,7 +731,7 @@
   .agentSteps{margin-top:22px; display:flex; flex-direction:column; gap:0;}
   .agentSteps .st{display:flex; gap:16px; padding:14px 0; border-top:var(--rule);}
   .agentSteps .st:last-child{border-bottom:var(--rule);}
-  .agentSteps .st .sn{font-family:var(--mono); font-size:11px; color:var(--oxblood); flex:none; width:22px;}
+  .agentSteps .st .sn{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--oxblood); flex:none; width:72px;}
   .agentSteps .st .sd b{display:block; font-family:var(--serif); font-weight:700; font-size:14px; color:var(--charcoal); margin-bottom:2px;}
   .agentSteps .st .sd span{font-size:13.5px; color:#3f3f3f;}
 
@@ -814,6 +814,83 @@
     .tAgentGrid{grid-template-columns:1fr;}
   }
 
+
+  /* ================= MANIFEST TABLE (cargo-manifest style) ================= */
+  .manifest{border:var(--rule-strong); margin-top:20px;}
+  .manifest .mHead{
+    display:flex; justify-content:space-between; padding:10px 16px; border-bottom:var(--rule-strong);
+    font-family:var(--mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--clay);
+    background:var(--paper-2);
+  }
+  .manifest table{width:100%; border-collapse:collapse; font-family:var(--mono); font-size:12px;}
+  .manifest th{
+    text-align:left; padding:8px 16px; border-bottom:1px solid rgba(43,43,43,0.25);
+    font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--clay); font-weight:400;
+  }
+  .manifest td{padding:9px 16px; border-bottom:1px solid rgba(43,43,43,0.12); color:var(--charcoal);}
+  .manifest tr:last-child td{border-bottom:none;}
+  .manifest .mFoot{padding:9px 16px; font-family:var(--display); font-style:italic; font-size:12px; color:var(--clay); border-top:var(--rule-strong);}
+
+  /* ================= ENHANCED DOSSIER CARD ================= */
+  .dossier{background:var(--paper-2); border:1.4px solid var(--charcoal); padding:34px; position:relative;}
+  .dossier .d-topline{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px; gap:20px;}
+  .dossier .d-entry{font-family:var(--mono); font-size:11px; letter-spacing:0.1em; color:var(--oxblood); border:1px solid var(--oxblood); padding:3px 9px; display:inline-block;}
+  .dossier .d-status{font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--clay); margin-top:6px;}
+  .dossier .d-title{font-size:30px; margin-bottom:4px;}
+  .dossier .d-loc{font-family:var(--mono); font-size:11.5px; color:var(--clay); margin-bottom:20px;}
+  .dossier .d-fields{display:grid; grid-template-columns:repeat(5,1fr); gap:14px; border-top:var(--rule); border-bottom:var(--rule); padding:16px 0; margin-bottom:22px;}
+  .dossier .d-fields div{font-family:var(--mono); font-size:9.5px; letter-spacing:0.04em; color:var(--clay); text-transform:uppercase;}
+  .dossier .d-fields b{display:block; font-family:var(--serif); font-weight:700; font-size:13px; color:var(--charcoal); text-transform:none; margin-top:3px;}
+  .dossier .d-why{margin-bottom:20px;}
+  .dossier .d-why .lbl{font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--oxblood); margin-bottom:8px;}
+  .dossier .d-why p{margin:0; font-family:var(--display); font-style:italic; font-size:16px; line-height:1.55; color:var(--charcoal);}
+  .dossier .d-notes{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:20px;}
+  .dossier .d-notes .lbl{font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--clay); margin-bottom:8px;}
+  .dossier .d-notes ul{margin:0; padding-left:16px; font-size:13px; color:#3a3a3a;}
+  .dossier .d-notes li{margin-bottom:5px;}
+  .dossier .d-notfor{
+    background:var(--paper); border-left:2.5px solid var(--oxblood); padding:14px 18px;
+    font-size:13px; color:#3a3a3a; margin-bottom:20px;
+  }
+  .dossier .d-archive{display:flex; gap:8px;}
+  .dossier .d-archive .th{
+    flex:1; aspect-ratio:1; background:repeating-linear-gradient(135deg, rgba(43,43,43,0.08) 0 2px, transparent 2px 10px), var(--sand);
+    border:1px solid rgba(43,43,43,0.25); display:flex; align-items:center; justify-content:center;
+  }
+  .dossier .d-archive .th span{font-family:var(--mono); font-size:7.5px; color:var(--charcoal); opacity:0.55; text-align:center;}
+  .dossier .d-stampWrap{width:88px; height:88px; flex:none;}
+
+  /* ================= TRADER-VIEW PANEL NUMBERING ================= */
+  .panelHead{display:flex; align-items:baseline; gap:16px; margin-bottom:8px;}
+  .panelHead .pnum{font-family:var(--display); font-size:15px; color:var(--oxblood); letter-spacing:0.02em;}
+  .panelHead .plabel{font-family:var(--mono); font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--clay);}
+
+  /* ================= MINI TRAVELER PREVIEW CARD (embedded) ================= */
+  .miniPreview{border:1.4px dashed var(--sand); background:var(--paper); padding:0;}
+  .miniPreview .mp-bar{
+    display:flex; align-items:center; gap:8px; padding:10px 16px; border-bottom:1.4px dashed var(--sand);
+    font-family:var(--mono); font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--clay);
+  }
+  .miniPreview .mp-dot{width:6px; height:6px; border-radius:50%; background:var(--sand);}
+  .miniPreview .mp-hero{
+    aspect-ratio:16/8; background:repeating-linear-gradient(135deg, rgba(43,43,43,0.07) 0 2px, transparent 2px 14px), var(--stone);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+  }
+  .miniPreview .mp-hero span{font-family:var(--mono); font-size:10px; color:var(--charcoal); opacity:0.55;}
+  .miniPreview .mp-body{padding:20px 22px;}
+  .miniPreview .mp-body h5{font-size:20px; margin:0 0 6px;}
+  .miniPreview .mp-body p{margin:0 0 14px; font-size:13px; color:#3f3f3f;}
+  .miniPreview .mp-cta{
+    display:inline-block; font-family:var(--mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
+    background:var(--charcoal); color:var(--paper); padding:9px 16px;
+  }
+
+  @media (max-width:880px){
+    .dossier .d-fields{grid-template-columns:1fr 1fr; gap:12px;}
+    .dossier .d-notes{grid-template-columns:1fr;}
+    .dossier .d-topline{flex-direction:column;}
+  }
+
 </style>
 </head>
 <body>
@@ -852,18 +929,18 @@
     </div>
   </section>
 
-  <!-- WHY NOW -->
+  <!-- WHY THESE PLATFORMS -->
   <section class="whyNow">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 1.0</span><span class="label">Why Now</span></div>
+      <div class="panelHead reveal"><span class="pnum">01</span><span class="plabel">Why These Platforms, Why Now</span></div>
       <div class="grid2 reveal">
         <div>
-          <h2 style="font-size:26px; margin-bottom:14px;">Advisory got noisy right when it needed to get quiet.</h2>
-          <p>Search results, sponsored placements, and AI-generated "top 10" lists have replaced firsthand knowledge with volume. Every stay looks the same from far enough away.</p>
+          <h2 style="font-size:26px; margin-bottom:14px;">Advisors need a source they can stand behind.</h2>
+          <p>Every OTA and AI itinerary tool now returns the same twelve properties, reworded. When a client asks "have you actually been here," too many advisors are quoting a listing back at them.</p>
         </div>
         <div>
-          <p>Wild Earth Stays exists to put a human record back at the center — a small, growing archive a traveler or advisor can actually trust, built on the same standard whether it's read by a person or handed to an assistant to search.</p>
-          <p>Forty-four years of firsthand travel, finally given a structure built for how people plan now.</p>
+          <p>Wild Earth Stays gives trade partners a firsthand-only archive to recommend from — with the dossier, the reasoning, and a name attached to every entry, so an advisor's recommendation carries the same weight as ours.</p>
+          <p>Forty-four years of firsthand travel, opened up to trade for the first time in 2026.</p>
         </div>
       </div>
     </div>
@@ -872,7 +949,7 @@
   <!-- WHY IT'S DIFFERENT -->
   <section class="twoColSection">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 1.1</span><span class="label">Why It's Different</span></div>
+      <div class="panelHead"><span class="pnum">01a</span><span class="plabel">Why It's Different</span></div>
       <div class="head reveal">
         <h2>Not a marketplace. A record.</h2>
         <p>Most stay platforms compete on inventory size. Wild Earth Stays does the opposite — the value is in what's been left out.</p>
@@ -900,7 +977,7 @@
   <!-- WHAT IT OFFERS -->
   <section class="twoColSection">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 1.15</span><span class="label">What It Offers</span></div>
+      <div class="panelHead"><span class="pnum">01b</span><span class="plabel">What It Offers</span></div>
       <div class="head reveal">
         <h2>Four things, working together.</h2>
         <p>Not a booking engine with a blog attached — a planning system built around one archive.</p>
@@ -917,7 +994,7 @@
   <!-- WHO WE PARTNER WITH -->
   <section class="twoColSection" id="partner">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 1.2</span><span class="label">Hand-Selected Partners</span></div>
+      <div class="panelHead"><span class="pnum">04</span><span class="plabel">Hand-Selected Partners</span></div>
       <div class="head reveal">
         <h2>What it takes to enter the Ledger.</h2>
         <p>We work with a small number of properties, deliberately. Most properties considered for the Ledger don't make it in — here's what we're actually looking for.</p>
@@ -946,30 +1023,108 @@
   <!-- SAMPLE LEDGER ENTRY -->
   <section class="twoColSection">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 1.3</span><span class="label">A Sample Entry</span></div>
+      <div class="panelHead reveal"><span class="pnum">02</span><span class="plabel">What Wild Earth Stays Offers — A Live Entry</span></div>
       <div class="head reveal">
         <h2>What a Wild Earth Stays dossier looks like.</h2>
-        <p>Not a listing with amenities checked off — a record, with a photo, a reason, and a person's name attached to it.</p>
+        <p>Not a listing with amenities checked off — a record, with a reason and a name attached to it. This is a real property already in the Wild Earth Stays portfolio, shown in the Ledger format.</p>
       </div>
-      <div class="bioGrid reveal" style="align-items:flex-start;">
-        <div class="imgPlaceholder ticked" style="--ar:4/5;">
-          <div class="ph"><span>Photo placeholder<br>Icehotel<br>Jukkasjärvi, Sweden</span></div>
-          <div class="cap2"><b>Icehotel</b>Rebuilt annually, entry updated each season</div>
+
+      <div class="dossier ticked reveal">
+        <div class="d-topline">
+          <div>
+            <div class="d-entry">ENTRY No. 051</div>
+            <div class="d-status">Founder Collection</div>
+          </div>
+          <div class="lc-stampWrap d-stampWrap stampGraphic">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path id="wesstamp_top" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0"/>
+                <path id="wesstamp_bot" d="M 100,100 m 78,0 a 78,78 0 1,1 -156,0"/>
+              </defs>
+              <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="1.2"/>
+              <circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="1"/>
+              <text font-family="Libre Caslon Display, serif" font-size="13.5" fill="currentColor" letter-spacing="4"><textPath href="#wesstamp_top" startOffset="50%" text-anchor="middle">THE LEDGER</textPath></text>
+              <text font-family="Courier Prime, monospace" font-size="9.5" fill="currentColor" letter-spacing="2.5"><textPath href="#wesstamp_bot" startOffset="50%" text-anchor="middle">RECORDED FROM EXPERIENCE</textPath></text>
+              <g stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M90,128 Q100,134 110,128 L108,138 Q100,141 92,138 Z"/>
+                <line x1="100" y1="128" x2="100" y2="120"/>
+                <path d="M100,120 C94,106 96,88 112,72 C116,88 112,106 100,120 Z"/>
+                <path d="M100,120 C102,106 104,92 112,72"/>
+                <path d="M100,113 L108,108 M99,104 L109,97 M99,95 L110,86"/>
+              </g>
+            </svg>
+          </div>
         </div>
-        <div class="ledgerCard ticked">
-          <div class="lc-head">
-            <span class="lc-entry">ENTRY No. 049</span>
-            <span class="lc-status">Special Interest</span>
+
+        <div class="d-title">Aguas Claras</div>
+        <div class="d-loc">Playa Chiquita, Puerto Viejo — Caribbean Coast, Costa Rica — 9°38'N 82°43'W</div>
+
+        <div class="d-fields">
+          <div>Recorded by<b>James Papagno</b></div>
+          <div>First visited<b>2019</b></div>
+          <div>Last visit<b>2025</b></div>
+          <div>Returned<b>4 times</b></div>
+          <div>Ledger Status<b>Founder Collection</b></div>
+        </div>
+
+        <div class="d-why">
+          <div class="lbl">Entered into the Ledger because</div>
+          <p>Twelve rooms, direct access to Playa Chiquita, and a Cayuga Collection property that treats its Afro-Caribbean and Bribrí surroundings as the point, not the backdrop. It's the rare beach stay that earns a place in an archive built mostly on remote and difficult-to-reach ground.</p>
+        </div>
+
+        <div class="d-notes">
+          <div>
+            <div class="lbl">Field Notes</div>
+            <ul>
+              <li>Snorkel Cahuita's reef, a 25-minute walk from the property</li>
+              <li>Ask for the Bribrí cacao ceremony over the standard tour</li>
+              <li>Morning yoga at Casa Gandhi is worth the early start</li>
+              <li>Best window: May – November</li>
+            </ul>
           </div>
-          <div class="lc-title" style="font-size:26px;">Icehotel</div>
-          <div class="lc-loc">Jukkasjärvi, Sweden — 67°51'N 20°36'E</div>
-          <div class="lc-rule"></div>
-          <div class="lc-rows">
-            <div>Recorded by<b>James Papagno</b></div>
-            <div>First visited<b>2010</b></div>
-            <div>Last visit<b>2025</b></div>
+          <div>
+            <div class="lbl">Practical Notes</div>
+            <ul>
+              <li>Nearest airport: SJO, San José</li>
+              <li>12 rooms across 4 categories, all with plunge pools</li>
+              <li>Direct beach access, Playa Chiquita</li>
+              <li>Meals: breakfast included, full board optional</li>
+            </ul>
           </div>
-          <div class="lc-quote">"It melts every spring and gets rebuilt from scratch. That's not a gimmick — it's the entire point. Nothing about this stay repeats."</div>
+        </div>
+
+        <div class="d-notfor">If you want a high-rise resort with nonstop programming, this isn't it. Aguas Claras is 12 rooms, unhurried, and built around noticing where you are.</div>
+
+        <div class="manifest">
+          <div class="mHead"><span>Room Manifest</span><span>Rates from, per person / night</span></div>
+          <table>
+            <tr><th>Category</th><th>Sleeps</th><th>From</th></tr>
+            <tr><td>1-Bedroom Bungalow</td><td>2 guests</td><td>$610</td></tr>
+            <tr><td>Pavlova Suite</td><td>2 guests</td><td>$475</td></tr>
+            <tr><td>2-Bedroom Bungalow</td><td>4 guests</td><td>$953</td></tr>
+            <tr><td>2-Bedroom Deluxe</td><td>4 guests, private plunge pool</td><td>$1,140</td></tr>
+          </table>
+          <div class="mFoot">Filed from the current Wild Earth Stays rate sheet — confirm live rates before quoting.</div>
+        </div>
+
+        <div class="d-archive" style="margin-top:20px;">
+          <div class="th"><span>Archive<br>image 1</span></div>
+          <div class="th"><span>Archive<br>image 2</span></div>
+          <div class="th"><span>Archive<br>image 3</span></div>
+          <div class="th"><span>Archive<br>image 4</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top:32px;">
+        <div class="panelHead reveal" style="margin-bottom:16px;"><span class="pnum">02a</span><span class="plabel">How Travelers See This Property</span></div>
+        <div class="miniPreview reveal">
+          <div class="mp-bar"><span class="mp-dot"></span>wildearthstays.com/property/aguas-claras — traveler view</div>
+          <div class="mp-hero"><span>Photo placeholder — Aguas Claras hero image</span></div>
+          <div class="mp-body">
+            <h5>Aguas Claras</h5>
+            <p>Welcome to the jungle. A soulful Caribbean escape where art, nature, and comfort meet on Costa Rica's Playa Chiquita — recommended because James has stayed here, not because it topped a search.</p>
+            <div class="mp-cta">Enquire About This Stay</div>
+          </div>
         </div>
       </div>
     </div>
@@ -978,17 +1133,17 @@
   <!-- MEET IGGI -->
   <section class="agentSection" style="background:var(--paper-2);">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 1.4</span><span class="label">The Planning Agent</span></div>
+      <div class="panelHead reveal"><span class="pnum">03</span><span class="plabel">The Planning Agent</span></div>
       <div class="agentGrid">
         <div class="reveal">
           <div class="agentBadge">Wild Earth Stays</div>
           <h3>Meet IGGI.</h3>
           <div class="role">The conversational planning agent for Wild Earth Stays.</div>
-          <p>IGGI doesn't book, and it doesn't pretend to be James. It asks the right follow-up questions, searches the Ledger honestly, and narrows a global archive down to a shortlist a human advisor picks up from there.</p>
+          <p>IGGI doesn't book, and it doesn't pretend to be James. It's the layer between a traveler's first message and a human advisor's final say — built to plan, organize, and hand off a trip that's already taken shape.</p>
           <div class="agentSteps">
-            <div class="st"><div class="sn">01</div><div class="sd"><b>Listens</b><span>Understands what the traveler actually wants — pace, privacy, season, past trips.</span></div></div>
-            <div class="st"><div class="sn">02</div><div class="sd"><b>Searches</b><span>Pulls only from recorded Ledger entries — nothing outside the archive.</span></div></div>
-            <div class="st"><div class="sn">03</div><div class="sd"><b>Hands off</b><span>Passes the shortlist and the reasoning to a human advisor for the final call.</span></div></div>
+            <div class="st"><div class="sn">Plan</div><div class="sd"><b>Turns a brief into a shortlist</b><span>Asks the follow-up questions a good advisor would — pace, privacy, season, past trips — then searches only recorded Ledger entries.</span></div></div>
+            <div class="st"><div class="sn">Organize</div><div class="sd"><b>Builds the working itinerary</b><span>Sequences stays, flags timing conflicts, and keeps every dossier, note, and reason attached as the plan takes shape.</span></div></div>
+            <div class="st"><div class="sn">Folio</div><div class="sd"><b>Compiles the Travel Folio</b><span>Once a human advisor confirms the plan, IGGI assembles it into the Folio automatically — nothing re-typed, nothing lost.</span></div></div>
           </div>
         </div>
         <div class="reveal">
@@ -1009,7 +1164,7 @@
   <!-- TRAVEL FOLIO -->
   <section class="folioSection">
     <div class="wrap">
-      <div class="entry" style="margin-bottom:0;"><span class="no" style="border-color:var(--sand); color:var(--sand);">Entry No. 1.5</span><span class="label" style="color:var(--sand);">After the Trip</span></div>
+      <div class="panelHead" style="margin-bottom:0;"><span class="pnum" style="color:var(--sand);">05</span><span class="plabel" style="color:var(--sand);">After the Trip — The Travel Folio</span></div>
       <div class="head reveal" style="margin-top:24px; max-width:640px;">
         <h2>The Travel Folio.</h2>
         <p>Where the digital age meets journey design — a record built to be reopened, not filed away.</p>
@@ -1038,7 +1193,7 @@
   <!-- LAUNCHING -->
   <section class="launchBand">
     <div class="wrap">
-      <div class="entry" style="margin-bottom:0;"><span class="no" style="border-color:var(--sand); color:var(--sand);">Entry No. 1.3</span><span class="label" style="color:var(--sand);">What We're Launching</span></div>
+      <div class="panelHead" style="margin-bottom:0;"><span class="pnum" style="color:var(--sand);">06</span><span class="plabel" style="color:var(--sand);">What We're Launching</span></div>
       <div class="head reveal" style="margin-top:24px; max-width:640px;">
         <h2>Launching in 2026 — for trade and for travelers.</h2>
         <p>Three things opening up across Wild Earth Stays this year.</p>
@@ -1066,7 +1221,7 @@
   <!-- BIO -->
   <section class="bioSection">
     <div class="wrap">
-      <div class="entry"><span class="no">Entry No. 1.4</span><span class="label">The Advisor</span></div>
+      <div class="panelHead"><span class="pnum">07</span><span class="plabel">The Advisor</span></div>
       <div class="bioGrid">
         <div class="frame reveal">
           <div class="photo"><span>Photo placeholder<br>James Papagno</span></div>
