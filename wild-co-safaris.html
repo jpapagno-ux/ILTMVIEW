@@ -815,7 +815,16 @@
   }
 
 
-  /* ================= MANIFEST TABLE (cargo-manifest style) ================= */
+  /* ================= CRUX ACCENT (scoped to Safari Crux section) ================= */
+  .cruxSection{ --crux-orange:#F59B4C; --crux-rust:#9D3813; --crux-brass:#7D612D; }
+  .cruxSection .agentBadge{border-color:var(--crux-rust); color:var(--crux-rust);}
+  .cruxSection .agentSteps .st .sn{color:var(--crux-rust);}
+  .cruxSection .chatMock{border-color:var(--crux-brass);}
+  .cruxSection .chatMock .cm-head{border-bottom-color:var(--crux-brass);}
+  .cruxSection .chatMock .bubble.user{background:var(--crux-rust);}
+  .cruxSection .chatMock .cm-foot{background:#241a12; color:var(--crux-orange);}
+  .cruxSection .crux-lockup{display:flex; align-items:center; gap:16px; margin-bottom:6px;}
+  .cruxSection .crux-lockup img{width:64px; flex:none;}
   .manifest{border:var(--rule-strong); margin-top:20px;}
   .manifest .mHead{
     display:flex; justify-content:space-between; padding:10px 16px; border-bottom:var(--rule-strong);
@@ -891,6 +900,27 @@
     .dossier .d-topline{flex-direction:column;}
   }
 
+
+  /* ================= SCROLLABLE PHOTO GALLERY ================= */
+  .scrollGallery{margin-top:8px;}
+  .sg-track{
+    display:flex; gap:16px; overflow-x:auto; padding-bottom:14px; scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
+  .sg-track::-webkit-scrollbar{height:6px;}
+  .sg-track::-webkit-scrollbar-thumb{background:var(--sand); border-radius:3px;}
+  .sg-item{flex:0 0 260px; scroll-snap-align:start;}
+  .sg-item .sg-photo{
+    aspect-ratio:4/3;
+    background:repeating-linear-gradient(135deg, rgba(43,43,43,0.08) 0 2px, transparent 2px 14px), var(--sand);
+    border:1.4px solid var(--charcoal);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+  }
+  .sg-item .sg-photo span{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--charcoal); opacity:0.55; max-width:75%;}
+  .sg-item .sg-cap{margin-top:10px; font-family:var(--mono); font-size:11px; color:var(--clay);}
+  .sg-item .sg-cap b{display:block; font-family:var(--serif); font-weight:700; font-size:13px; color:var(--charcoal); margin-bottom:1px;}
+  .sg-hint{font-family:var(--mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--sand); margin-top:2px;}
+
 </style>
 </head>
 <body>
@@ -915,9 +945,10 @@
 <main>
 
   <!-- HERO -->
-  <section class="platHero">
+  <section class="platHero" style="position:relative; overflow:hidden;">
     <div class="wrap">
       <a href="./" class="backLink reveal">← All Platforms</a>
+      <img src="./assets/wildco-crest-charcoal.png" alt="Wild & Co Safaris Africa crest" class="reveal" style="width:180px; margin-bottom:28px;">
       <div class="region reveal">Africa — Safari Specialist</div>
       <h1 class="reveal">Wild &amp; Co Safaris</h1>
       <div class="tag reveal">Full itineraries, built end to end, on the ground.</div>
@@ -926,6 +957,42 @@
         <a href="#partner" class="btn">Become a Ground Partner</a>
         <a href="./brand-system#edit" class="btn outline">See a Case Study</a>
       </div>
+    </div>
+  </section>
+
+  <!-- SCROLLABLE GALLERY -->
+  <section class="section" style="padding-top:48px; padding-bottom:48px;">
+    <div class="wrap">
+      <div class="panelHead reveal" style="margin-bottom:16px;"><span class="pnum">01c</span><span class="plabel">A Few Scenes From the Archive</span></div>
+      <div class="scrollGallery reveal">
+        <div class="sg-track">
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Little DumaTau</b>Entry No. 052 — Botswana</div>
+          </div>
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Jack's Camp</b>Entry No. 041 — Botswana</div>
+          </div>
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Singita Sasakwa Lodge</b>Entry No. 042 — Tanzania</div>
+          </div>
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Qorokwe Camp</b>Entry No. 046 — Botswana</div>
+          </div>
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Katavi House</b>Entry No. 047 — Tanzania</div>
+          </div>
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Awake the Remarkable</b>Entry No. 045 — Tanzania</div>
+          </div>
+        </div>
+      </div>
+      <div class="sg-hint">← scroll →</div>
     </div>
   </section>
 
@@ -995,9 +1062,12 @@
   <section class="twoColSection" id="partner">
     <div class="wrap">
       <div class="panelHead"><span class="pnum">04</span><span class="plabel">Hand-Selected Partners</span></div>
-      <div class="head reveal">
-        <h2>What we look for in an operator.</h2>
-        <p>The bar is the same one we hold for every property in the Ledger — it just gets applied to camps, guides, and ground operations instead.</p>
+      <div class="head reveal" style="display:flex; align-items:flex-start; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+        <div>
+          <h2>What we look for in an operator.</h2>
+          <p>The bar is the same one we hold for every property in the Ledger — it just gets applied to camps, guides, and ground operations instead.</p>
+        </div>
+        <img src="./assets/hare-stamp.png" alt="James Wild & Co — Ledgered & Vetted" style="width:100px; flex:none;">
       </div>
       <div class="criteriaList reveal">
         <div class="row">
@@ -1131,12 +1201,15 @@
   </section>
 
   <!-- MEET SAFARI CRUX -->
-  <section class="agentSection" style="background:var(--paper-2);">
+  <section class="agentSection cruxSection" style="background:var(--paper-2);">
     <div class="wrap">
       <div class="panelHead reveal"><span class="pnum">03</span><span class="plabel">The Planning Agent</span></div>
       <div class="agentGrid">
         <div class="reveal">
-          <div class="agentBadge">Wild &amp; Co Safaris</div>
+          <div class="crux-lockup">
+            <img src="./assets/crux-logo-light.png" alt="CRUX — your personal safari guide">
+            <div class="agentBadge">Wild &amp; Co Safaris</div>
+          </div>
           <h3>Meet Safari Crux.</h3>
           <div class="role">The conversational planning agent for Wild &amp; Co Safaris.</div>
           <p>Safari Crux doesn't sell fixed departures. It's the layer between a trade brief and a confirmed routing — built to plan, organize, and hand off an itinerary that's already taken real shape on the ground.</p>
@@ -1224,7 +1297,7 @@
       <div class="panelHead"><span class="pnum">07</span><span class="plabel">The Advisor</span></div>
       <div class="bioGrid">
         <div class="frame reveal">
-          <div class="photo"><span>Photo placeholder<br>James Papagno</span></div>
+          <img src="./assets/photo-founder-safari.jpg" alt="James Papagno in the field, Botswana" style="width:100%; display:block; aspect-ratio:4/5; object-fit:cover;">
           <div class="cap"><b>James Papagno</b>Founder &amp; CEO</div>
         </div>
         <div class="reveal">

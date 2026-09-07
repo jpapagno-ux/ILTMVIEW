@@ -814,6 +814,41 @@
     .tAgentGrid{grid-template-columns:1fr;}
   }
 
+
+  /* ================= CHOOSER CARD PHOTOS ================= */
+  .offerCard{padding:0;}
+  .offerCard .cardPhoto{
+    aspect-ratio:16/9;
+    background:repeating-linear-gradient(135deg, rgba(43,43,43,0.08) 0 2px, transparent 2px 14px), var(--sand);
+    border-bottom:var(--rule-strong);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+  }
+  .offerCard .cardPhoto span{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--charcoal); opacity:0.55; max-width:75%;}
+  .offerCard .cardBody{padding:36px 32px;}
+  .offerCard .bignum{top:20px; right:20px;}
+
+  /* ================= TIMELESS VOYAGES TEASER ================= */
+  .voyageTeaser{
+    margin-top:20px; border:1.4px dashed var(--oxblood); background:var(--paper-2);
+    display:grid; grid-template-columns:0.9fr 1.1fr; overflow:hidden;
+  }
+  .voyageTeaser .vt-photo{
+    background:repeating-linear-gradient(135deg, rgba(43,43,43,0.08) 0 2px, transparent 2px 14px), var(--stone);
+    display:flex; align-items:center; justify-content:center; text-align:center; min-height:220px;
+  }
+  .voyageTeaser .vt-photo span{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--charcoal); opacity:0.55; max-width:70%;}
+  .voyageTeaser .vt-body{padding:32px 36px;}
+  .voyageTeaser .vt-tag{
+    display:inline-flex; font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--oxblood); border:1px solid var(--oxblood); padding:5px 12px; margin-bottom:16px;
+  }
+  .voyageTeaser h3{font-size:24px; margin-bottom:10px;}
+  .voyageTeaser p{margin:0; color:#3f3f3f; font-size:14.5px;}
+
+  @media (max-width:880px){
+    .voyageTeaser{grid-template-columns:1fr;}
+  }
+
 </style>
 </head>
 <body>
@@ -919,20 +954,38 @@
       <div class="chooserGrid reveal">
         <a href="./wild-earth-stays" class="offerCard">
           <span class="bignum">01</span>
-          <div class="region">Global — All Regions</div>
-          <h3>Wild Earth Stays</h3>
-          <div class="tag">The archive of remarkable places, worldwide.</div>
-          <p>A personal record of stays across every continent we work in — safari camps, island retreats, arctic lodges, private villas. Built for advisors and travelers booking singular, stand-alone stays.</p>
-          <span class="go">View the platform</span>
+          <div class="cardPhoto" style="background:none; padding:0;"><img src="./assets/photo-coastline.jpg" alt="Wild Earth Stays — coastal archive image" style="width:100%; height:100%; object-fit:cover;"></div>
+          <div class="cardBody">
+            <div class="region">Global — All Regions</div>
+            <h3>Wild Earth Stays</h3>
+            <div class="tag">The archive of remarkable places, worldwide.</div>
+            <p>A personal record of stays across every continent we work in — safari camps, island retreats, arctic lodges, private villas. Built for advisors and travelers booking singular, stand-alone stays.</p>
+            <span class="go">View the platform</span>
+          </div>
         </a>
         <a href="./wild-co-safaris" class="offerCard">
           <span class="bignum">02</span>
-          <div class="region">Africa — Safari Specialist</div>
-          <h3>Wild &amp; Co Safaris</h3>
-          <div class="tag">Full itineraries, built end to end, on the ground.</div>
-          <p>The dedicated safari planning arm — multi-camp routings, ground logistics, and guiding relationships across Africa. Built for trade partners assembling full safari itineraries.</p>
-          <span class="go">View the platform</span>
+          <div class="cardPhoto" style="background:none; padding:0;"><img src="./assets/photo-founder-couple.jpg" alt="Wild & Co Safaris — on safari" style="width:100%; height:100%; object-fit:cover; object-position:center 30%;"></div>
+          <div class="cardBody">
+            <div class="region">Africa — Safari Specialist</div>
+            <h3>Wild &amp; Co Safaris</h3>
+            <div class="tag">Full itineraries, built end to end, on the ground.</div>
+            <p>The dedicated safari planning arm — multi-camp routings, ground logistics, and guiding relationships across Africa. Built for trade partners assembling full safari itineraries.</p>
+            <span class="go">View the platform</span>
+          </div>
         </a>
+      </div>
+
+      <div class="voyageTeaser reveal">
+        <div class="vt-photo" style="background:none;"><img src="./assets/photo-voyage-sunset.jpg" alt="Timeless Voyages — expedition sailing at sunset" style="width:100%; height:100%; object-fit:cover;"></div>
+        <div class="vt-body">
+          <div class="vt-tag">Coming 2027</div>
+          <h3>Timeless Voyages</h3>
+          <p>A third platform, currently in development: small-ship and expedition journeys, recorded with the same ship's-log editorial system already used for entries like the Kimberley Expedition. Early details for trade partners on request.</p>
+          <div style="margin-top:18px; border:1.4px solid var(--charcoal); aspect-ratio:16/9; overflow:hidden;">
+            <img src="./assets/photo-voyage-deck.jpg" alt="Timeless Voyages — expedition ship deck" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
       </div>
 
       <div class="otherLink reveal">

@@ -891,6 +891,27 @@
     .dossier .d-topline{flex-direction:column;}
   }
 
+
+  /* ================= SCROLLABLE PHOTO GALLERY ================= */
+  .scrollGallery{margin-top:8px;}
+  .sg-track{
+    display:flex; gap:16px; overflow-x:auto; padding-bottom:14px; scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
+  .sg-track::-webkit-scrollbar{height:6px;}
+  .sg-track::-webkit-scrollbar-thumb{background:var(--sand); border-radius:3px;}
+  .sg-item{flex:0 0 260px; scroll-snap-align:start;}
+  .sg-item .sg-photo{
+    aspect-ratio:4/3;
+    background:repeating-linear-gradient(135deg, rgba(43,43,43,0.08) 0 2px, transparent 2px 14px), var(--sand);
+    border:1.4px solid var(--charcoal);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+  }
+  .sg-item .sg-photo span{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--charcoal); opacity:0.55; max-width:75%;}
+  .sg-item .sg-cap{margin-top:10px; font-family:var(--mono); font-size:11px; color:var(--clay);}
+  .sg-item .sg-cap b{display:block; font-family:var(--serif); font-weight:700; font-size:13px; color:var(--charcoal); margin-bottom:1px;}
+  .sg-hint{font-family:var(--mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--sand); margin-top:2px;}
+
 </style>
 </head>
 <body>
@@ -918,6 +939,7 @@
   <section class="platHero">
     <div class="wrap">
       <a href="./" class="backLink reveal">← All Platforms</a>
+      <img src="./assets/wes-icon.svg" alt="Wild Earth Stays mark" class="reveal" style="width:130px; margin-bottom:24px;">
       <div class="region reveal">Global — All Regions</div>
       <h1 class="reveal">Wild Earth Stays</h1>
       <div class="tag reveal">The archive of remarkable places, worldwide.</div>
@@ -926,6 +948,46 @@
         <a href="#partner" class="btn">Become a Partner</a>
         <a href="./brand-system#edit" class="btn outline">See a Case Study</a>
       </div>
+    </div>
+  </section>
+
+  <!-- SCROLLABLE GALLERY -->
+  <section class="section" style="padding-top:48px; padding-bottom:48px;">
+    <div class="wrap">
+      <div class="panelHead reveal" style="margin-bottom:16px;"><span class="pnum">01c</span><span class="plabel">A Few Scenes From the Archive</span></div>
+      <div class="scrollGallery reveal">
+        <div class="sg-track">
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Aguas Claras</b>Entry No. 051 — Costa Rica</div>
+          </div>
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Icehotel</b>Entry No. 049 — Sweden</div>
+          </div>
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Explora Patagonia</b>Entry No. 050 — Chile</div>
+          </div>
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Kisawa Sanctuary</b>Entry No. 043 — Mozambique</div>
+          </div>
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Benguerra Island</b>Entry No. 044 — Mozambique</div>
+          </div>
+          <div class="sg-item">
+            <div class="sg-photo"><span>Photo placeholder</span></div>
+            <div class="sg-cap"><b>Little Kulala</b>Entry No. 048 — Namibia</div>
+          </div>
+          <div class="sg-item">
+            <div class="sg-photo" style="background:none; border:1.4px solid var(--charcoal);"><img src="./assets/photo-waterfall.jpg" alt="From the field — recent visit" style="width:100%; height:100%; object-fit:cover;"></div>
+            <div class="sg-cap"><b>From the Field</b>James's notes, recent visit</div>
+          </div>
+        </div>
+      </div>
+      <div class="sg-hint">← scroll →</div>
     </div>
   </section>
 
@@ -995,9 +1057,12 @@
   <section class="twoColSection" id="partner">
     <div class="wrap">
       <div class="panelHead"><span class="pnum">04</span><span class="plabel">Hand-Selected Partners</span></div>
-      <div class="head reveal">
-        <h2>What it takes to enter the Ledger.</h2>
-        <p>We work with a small number of properties, deliberately. Most properties considered for the Ledger don't make it in — here's what we're actually looking for.</p>
+      <div class="head reveal" style="display:flex; align-items:flex-start; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+        <div>
+          <h2>What it takes to enter the Ledger.</h2>
+          <p>We work with a small number of properties, deliberately. Most properties considered for the Ledger don't make it in — here's what we're actually looking for.</p>
+        </div>
+        <img src="./assets/hare-stamp.png" alt="James Wild & Co — Ledgered & Vetted" style="width:100px; flex:none;">
       </div>
       <div class="criteriaList reveal">
         <div class="row">
@@ -1224,7 +1289,7 @@
       <div class="panelHead"><span class="pnum">07</span><span class="plabel">The Advisor</span></div>
       <div class="bioGrid">
         <div class="frame reveal">
-          <div class="photo"><span>Photo placeholder<br>James Papagno</span></div>
+          <img src="./assets/photo-founder-safari.jpg" alt="James Papagno in the field" style="width:100%; display:block; aspect-ratio:4/5; object-fit:cover;">
           <div class="cap"><b>James Papagno</b>Founder &amp; CEO</div>
         </div>
         <div class="reveal">
