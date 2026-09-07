@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wild &amp; Co Safaris — James Wild &amp; Company</title>
-<meta name="description" content="Wild & Co Safaris — full African safari itineraries, built end to end. A B2B overview for trade partners.">
+<title>Wild &amp; Co Safaris: James Wild &amp; Company</title>
+<meta name="description" content="Wild & Co Safaris: full African safari itineraries, built end to end. A B2B overview for trade partners.">
 <link rel="icon" type="image/png" href="./assets/logo-seal.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,7 +81,14 @@
   .hr-strong{border:0; border-top:var(--rule-strong); margin:0;}
 
   /* ---------- NAV ---------- */
-  header.site{
+    .navTop{
+    display:flex; justify-content:center; align-items:center;
+    padding:16px 0;
+    border-bottom:1px solid rgba(43,43,43,0.08);
+  }
+  .navTop img{height:56px; width:auto; display:block;}
+
+header.site{
     position:sticky; top:0; z-index:50;
     background:rgba(242,238,230,0.92);
     backdrop-filter:blur(6px);
@@ -89,8 +96,8 @@
   }
   .nav{
     max-width:var(--max); margin:0 auto; padding:0 var(--edge);
-    display:flex; align-items:center; justify-content:space-between;
-    height:64px;
+    display:flex; align-items:center; justify-content:center;
+    height:56px; position:relative;
   }
   .brand-mark{
     display:flex; align-items:center; gap:11px;
@@ -144,7 +151,7 @@
     background:transparent; color:var(--charcoal);
   }
   .btn.outline:hover{background:var(--charcoal); color:var(--paper);}
-  .navToggle{display:none;}
+  .navToggle{display:none; position:absolute; right:var(--edge); top:50%; transform:translateY(-50%);}
 
   /* ---------- FOUNDER WELCOME ---------- */
   .welcome{
@@ -468,7 +475,7 @@
     .reveal{opacity:1; transform:none; transition:none;}
   }
 
-  /* ================= LANDING — PLATFORM CHOOSER ================= */
+  /* ================= LANDING - PLATFORM CHOOSER ================= */
   .chooser{padding:70px 0 100px;}
   .chooser .head{max-width:640px; margin-bottom:8px;}
   .chooser .head p{margin-top:16px; font-size:16px; color:#3f3f3f; max-width:56ch;}
@@ -609,7 +616,7 @@
   }
   .watermark svg{width:100%; height:100%; display:block;}
 
-  /* ledger section divider — double rule with center mark */
+  /* ledger section divider - double rule with center mark */
   .ledgerDivider{
     display:flex; align-items:center; gap:14px;
     padding:0 var(--edge); max-width:var(--max); margin:0 auto;
@@ -619,7 +626,7 @@
     width:7px; height:7px; border:1px solid var(--clay); transform:rotate(45deg); flex:none;
   }
 
-  /* corner tick marks on cards — archival dossier feel */
+  /* corner tick marks on cards - archival dossier feel */
   .ticked{position:relative;}
   .ticked::before, .ticked::after{
     content:""; position:absolute; width:9px; height:9px;
@@ -653,14 +660,14 @@
   }
   .ledgerCard .lc-stampWrap{position:absolute; top:24px; right:24px; width:78px; height:78px;}
 
-  /* ---- Ledger Lanes — native 4-card grid ---- */
+  /* ---- Ledger Lanes - native 4-card grid ---- */
   .lanesGrid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(43,43,43,0.18); border:var(--rule);}
   .laneCard{background:var(--paper); padding:28px 22px;}
   .laneCard .ln{font-family:var(--mono); font-size:10.5px; color:var(--oxblood); margin-bottom:10px;}
   .laneCard h4{font-family:var(--display); font-weight:400; font-size:18px; margin:0 0 10px;}
   .laneCard p{margin:0; font-size:13.5px; color:#3f3f3f;}
 
-  /* ---- Ship's log strip — native route/timeline ---- */
+  /* ---- Ship's log strip - native route/timeline ---- */
   .shipsLog{margin-top:8px;}
   .shipsLog .route{
     display:flex; align-items:flex-start; overflow-x:auto; gap:0; padding-bottom:6px;
@@ -921,16 +928,31 @@
   .sg-item .sg-cap b{display:block; font-family:var(--serif); font-weight:700; font-size:13px; color:var(--charcoal); margin-bottom:1px;}
   .sg-hint{font-family:var(--mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--sand); margin-top:2px;}
 
+  .footBrand{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;
+    padding-bottom:26px; margin-bottom:26px; border-bottom:1px solid rgba(43,43,43,0.14);
+  }
+  .footBrand img{width:88px; flex:none;}
+  .footBrand .footContact{
+    display:flex; gap:28px; flex-wrap:wrap;
+    font-family:var(--mono); font-size:11px; color:var(--clay);
+  }
+  .footBrand .footContact a{color:var(--charcoal); text-decoration:none; border-bottom:1px solid var(--sand);}
+  .footBrand .footContact a:hover{color:var(--oxblood); border-color:var(--oxblood);}
+  .footLegal{
+    text-align:center; margin-top:18px;
+    font-family:var(--mono); font-size:9.5px; letter-spacing:0.04em; color:var(--sand);
+  }
+
 </style>
 </head>
 <body>
 
 <header class="site">
+  <div class="navTop">
+    <a href="./"><img src="./assets/hare-stamp.png" alt="James Wild & Co"></a>
+  </div>
   <div class="nav">
-    <a href="./" class="brand-mark">
-      <span class="coin">W</span>
-      <span class="word"><b>James Wild</b>&amp; Company</span>
-    </a>
     <nav class="links">
       <a href="./wild-earth-stays">Wild Earth Stays</a>
       <a href="./wild-co-safaris">Wild &amp; Co Safaris</a>
@@ -949,10 +971,10 @@
     <div class="wrap">
       <a href="./" class="backLink reveal">← All Platforms</a>
       <img src="./assets/wildco-crest-charcoal.png" alt="Wild & Co Safaris Africa crest" class="reveal" style="width:180px; margin-bottom:28px;">
-      <div class="region reveal">Africa — Safari Specialist</div>
+      <div class="region reveal">Africa · Safari Specialist</div>
       <h1 class="reveal">Wild &amp; Co Safaris</h1>
       <div class="tag reveal">Full itineraries, built end to end, on the ground.</div>
-      <p class="sub reveal">The dedicated safari planning arm of James Wild &amp; Company — multi-camp routings, ground logistics, charter flights and guiding relationships held directly with operators across Africa. This is trip design, not property listing.</p>
+      <p class="sub reveal">The dedicated safari planning arm of James Wild &amp; Company: multi-camp routings, ground logistics, charter flights and guiding relationships held directly with operators across Africa. This is trip design, not property listing.</p>
       <div class="ctaRow reveal" style="margin-top:32px;">
         <a href="#partner" class="btn">Become a Ground Partner</a>
         <a href="./brand-system#edit" class="btn outline">See a Case Study</a>
@@ -968,27 +990,27 @@
         <div class="sg-track">
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Little DumaTau</b>Entry No. 052 — Botswana</div>
+            <div class="sg-cap"><b>Little DumaTau</b>Entry No. 052, Botswana</div>
           </div>
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Jack's Camp</b>Entry No. 041 — Botswana</div>
+            <div class="sg-cap"><b>Jack's Camp</b>Entry No. 041, Botswana</div>
           </div>
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Singita Sasakwa Lodge</b>Entry No. 042 — Tanzania</div>
+            <div class="sg-cap"><b>Singita Sasakwa Lodge</b>Entry No. 042, Tanzania</div>
           </div>
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Qorokwe Camp</b>Entry No. 046 — Botswana</div>
+            <div class="sg-cap"><b>Qorokwe Camp</b>Entry No. 046, Botswana</div>
           </div>
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Katavi House</b>Entry No. 047 — Tanzania</div>
+            <div class="sg-cap"><b>Katavi House</b>Entry No. 047, Tanzania</div>
           </div>
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Awake the Remarkable</b>Entry No. 045 — Tanzania</div>
+            <div class="sg-cap"><b>Awake the Remarkable</b>Entry No. 045, Tanzania</div>
           </div>
         </div>
       </div>
@@ -1003,10 +1025,10 @@
       <div class="grid2 reveal">
         <div>
           <h2 style="font-size:26px; margin-bottom:14px;">Safari routings have consolidated around the same operator decks.</h2>
-          <p>Most itineraries advisors get back are assembled from a shared pool of camps and resold with different branding on top — the routing is templated even when the pitch isn't.</p>
+          <p>Most itineraries advisors get back are assembled from a shared pool of camps and resold with different branding on top. The routing is templated even when the pitch isn't.</p>
         </div>
         <div>
-          <p>Wild &amp; Co Safaris gives trade partners direct-relationship access to a smaller, firsthand-vetted set of camps and operators — with the reasoning behind each routing decision, not just a quote.</p>
+          <p>Wild &amp; Co Safaris gives trade partners direct-relationship access to a smaller, firsthand-vetted set of camps and operators, with the reasoning behind each routing decision, not just a quote.</p>
           <p>Forty-four years on the ground in Africa, opened up to trade for the first time in 2026.</p>
         </div>
       </div>
@@ -1019,7 +1041,7 @@
       <div class="panelHead"><span class="pnum">01a</span><span class="plabel">Why It's Different</span></div>
       <div class="head reveal">
         <h2>Built route by route, not pulled from a template.</h2>
-        <p>Most safari itineraries are assembled from a shared pool of the same twelve camps. Ours are built from a much smaller list — one we've actually stood in.</p>
+        <p>Most safari itineraries are assembled from a shared pool of the same twelve camps. Ours are built from a much smaller list, one we've actually stood in.</p>
       </div>
       <div class="why-grid reveal">
         <div class="why-card">
@@ -1030,7 +1052,7 @@
         <div class="why-card">
           <div class="k">Direct Ground Relationships</div>
           <h4>No booking layer</h4>
-          <p>We work straight with operators, guides, and camp owners across Africa — not through a reservations intermediary.</p>
+          <p>We work straight with operators, guides, and camp owners across Africa, not through a reservations intermediary.</p>
         </div>
         <div class="why-card">
           <div class="k">Specialist Focus</div>
@@ -1047,13 +1069,13 @@
       <div class="panelHead"><span class="pnum">01b</span><span class="plabel">What It Offers</span></div>
       <div class="head reveal">
         <h2>Four things, working together.</h2>
-        <p>Not a fixed-departure catalogue — a planning system built around direct ground relationships.</p>
+        <p>Not a fixed-departure catalogue. A planning system built around direct ground relationships.</p>
       </div>
       <div class="offerList reveal">
-        <div class="item"><div class="ic">01</div><div><h4>The Ledger Archive</h4><p>Camps and operators recorded as dossiers — visited, vetted, and reviewed on rotation.</p></div></div>
+        <div class="item"><div class="ic">01</div><div><h4>The Ledger Archive</h4><p>Camps and operators recorded as dossiers: visited, vetted, and reviewed on rotation.</p></div></div>
         <div class="item"><div class="ic">02</div><div><h4>Direct Ground Relationships</h4><p>No reservations layer between the client's itinerary and the camp itself.</p></div></div>
         <div class="item"><div class="ic">03</div><div><h4>Safari Crux, the Planning Agent</h4><p>Conversational routing that turns a brief into a real multi-camp itinerary draft.</p></div></div>
-        <div class="item"><div class="ic">04</div><div><h4>The Travel Folio</h4><p>A digital record of the route, the camps, and the guiding — kept long after the trip.</p></div></div>
+        <div class="item"><div class="ic">04</div><div><h4>The Travel Folio</h4><p>A digital record of the route, the camps, and the guiding, kept long after the trip.</p></div></div>
       </div>
     </div>
   </section>
@@ -1065,9 +1087,9 @@
       <div class="head reveal" style="display:flex; align-items:flex-start; justify-content:space-between; gap:32px; flex-wrap:wrap;">
         <div>
           <h2>What we look for in an operator.</h2>
-          <p>The bar is the same one we hold for every property in the Ledger — it just gets applied to camps, guides, and ground operations instead.</p>
+          <p>The bar is the same one we hold for every property in the Ledger. It just gets applied to camps, guides, and ground operations instead.</p>
         </div>
-        <img src="./assets/hare-stamp.png" alt="James Wild & Co — Ledgered & Vetted" style="width:100px; flex:none;">
+        <img src="./assets/hare-stamp.png" alt="James Wild & Co, Ledgered & Vetted" style="width:100px; flex:none;">
       </div>
       <div class="criteriaList reveal">
         <div class="row">
@@ -1076,7 +1098,7 @@
         </div>
         <div class="row">
           <div class="n">02</div>
-          <div><div class="t">Firsthand-visit standard</div><p class="d">Camps meet the same bar as every Wild Earth Stays entry — visited before it's ever recommended.</p></div>
+          <div><div class="t">Firsthand-visit standard</div><p class="d">Camps meet the same bar as every Wild Earth Stays entry, visited before it's ever recommended.</p></div>
         </div>
         <div class="row">
           <div class="n">03</div>
@@ -1084,7 +1106,7 @@
         </div>
         <div class="row">
           <div class="n">04</div>
-          <div><div class="t">Willing to work directly</div><p class="d">No reservations intermediary between us and the camp — a direct line matters more to us than volume.</p></div>
+          <div><div class="t">Willing to work directly</div><p class="d">No reservations intermediary between us and the camp. A direct line matters more to us than volume.</p></div>
         </div>
       </div>
     </div>
@@ -1093,10 +1115,10 @@
   <!-- SAMPLE LEDGER ENTRY -->
   <section class="twoColSection">
     <div class="wrap">
-      <div class="panelHead reveal"><span class="pnum">02</span><span class="plabel">What Wild &amp; Co Safaris Offers — A Live Entry</span></div>
+      <div class="panelHead reveal"><span class="pnum">02</span><span class="plabel">What Wild &amp; Co Safaris Offers: A Live Entry</span></div>
       <div class="head reveal">
         <h2>What a Wild &amp; Co Safaris dossier looks like.</h2>
-        <p>Same standard as every Ledger entry — a camp doesn't appear in a routing until it's earned its place in the archive.</p>
+        <p>Same standard as every Ledger entry. A camp doesn't appear in a routing until it's earned its place in the archive.</p>
       </div>
 
       <div class="dossier ticked reveal">
@@ -1127,7 +1149,7 @@
         </div>
 
         <div class="d-title">Little DumaTau</div>
-        <div class="d-loc">Linyanti Reserve, Northern Botswana — Osprey Lagoon</div>
+        <div class="d-loc">Linyanti Reserve, Northern Botswana, Osprey Lagoon</div>
 
         <div class="d-fields">
           <div>Recorded by<b>James Papagno</b></div>
@@ -1139,7 +1161,7 @@
 
         <div class="d-why">
           <div class="lbl">Entered into the Ledger because</div>
-          <p>Four tented suites on Osprey Lagoon, in the middle of two of the busiest elephant corridors in the Linyanti. It's the rare camp small enough to feel private while sitting on some of the best game viewing in northern Botswana — still under review until it's proven itself across more than one season.</p>
+          <p>Four tented suites on Osprey Lagoon, in the middle of two of the busiest elephant corridors in the Linyanti. It's the rare camp small enough to feel private while sitting on some of the best game viewing in northern Botswana, still under review until it's proven itself across more than one season.</p>
         </div>
 
         <div class="d-notes">
@@ -1147,7 +1169,7 @@
             <div class="lbl">Field Notes</div>
             <ul>
               <li>Elephant herds cross the lagoon most mornings in the dry season</li>
-              <li>Take the barge for sunset — quieter than a drive</li>
+              <li>Take the barge for sunset, quieter than a drive</li>
               <li>Shares Osprey Retreat spa and deli with sister camp DumaTau</li>
               <li>Best window: June – October for elephant concentrations</li>
             </ul>
@@ -1156,7 +1178,7 @@
             <div class="lbl">Practical Notes</div>
             <ul>
               <li>Access via light aircraft into the Linyanti Reserve</li>
-              <li>4 tented suites only — books out fast in peak season</li>
+              <li>4 tented suites only, books out fast in peak season</li>
               <li>Each tent has a private plunge pool and deck</li>
               <li>Rate basis: full board, activities included</li>
             </ul>
@@ -1174,7 +1196,7 @@
             <tr><td>Activities</td><td>Game drives, walking safaris, barge cruises</td></tr>
             <tr><td>Opened</td><td>2022</td></tr>
           </table>
-          <div class="mFoot">Filed from current operator specifications — confirm live rates before quoting.</div>
+          <div class="mFoot">Filed from current operator specifications. Confirm live rates before quoting.</div>
         </div>
 
         <div class="d-archive" style="margin-top:20px;">
@@ -1188,11 +1210,11 @@
       <div style="margin-top:32px;">
         <div class="panelHead reveal" style="margin-bottom:16px;"><span class="pnum">02a</span><span class="plabel">How Travelers See This Camp</span></div>
         <div class="miniPreview reveal">
-          <div class="mp-bar"><span class="mp-dot"></span>wildcosafaris.com/camp/little-dumatau — traveler view</div>
-          <div class="mp-hero"><span>Photo placeholder — Little DumaTau hero image</span></div>
+          <div class="mp-bar"><span class="mp-dot"></span>wildcosafaris.com/camp/little-dumatau, traveler view</div>
+          <div class="mp-hero"><span>Photo placeholder, Little DumaTau hero image</span></div>
           <div class="mp-body">
             <h5>Little DumaTau</h5>
-            <p>Four tents, one lagoon, and some of the best elephant viewing in Botswana — routed for you because we've stood on that deck ourselves, not pulled from a shared operator list.</p>
+            <p>Four tents, one lagoon, and some of the best elephant viewing in Botswana, routed for you because we've stood on that deck ourselves, not pulled from a shared operator list.</p>
             <div class="mp-cta">Enquire About This Route</div>
           </div>
         </div>
@@ -1207,27 +1229,27 @@
       <div class="agentGrid">
         <div class="reveal">
           <div class="crux-lockup">
-            <img src="./assets/crux-logo-light.png" alt="CRUX — your personal safari guide">
+            <img src="./assets/crux-logo-light.png" alt="CRUX, your personal safari guide">
             <div class="agentBadge">Wild &amp; Co Safaris</div>
           </div>
           <h3>Meet Safari Crux.</h3>
           <div class="role">The conversational planning agent for Wild &amp; Co Safaris.</div>
-          <p>Safari Crux doesn't sell fixed departures. It's the layer between a trade brief and a confirmed routing — built to plan, organize, and hand off an itinerary that's already taken real shape on the ground.</p>
+          <p>Safari Crux doesn't sell fixed departures. It's the layer between a trade brief and a confirmed routing. Built to plan, organize, and hand off an itinerary that's already taken real shape on the ground.</p>
           <div class="agentSteps">
             <div class="st"><div class="sn">Plan</div><div class="sd"><b>Turns a brief into a draft routing</b><span>Takes migration timing, guiding style, and pace, then builds a camp-by-camp draft from vetted Ledger entries only.</span></div></div>
             <div class="st"><div class="sn">Organize</div><div class="sd"><b>Sequences the itinerary</b><span>Orders legs, flags charter and transfer logistics, and keeps camp notes and guiding pairings attached throughout.</span></div></div>
-            <div class="st"><div class="sn">Folio</div><div class="sd"><b>Compiles the Travel Folio</b><span>Once the planning team confirms the route, Safari Crux assembles it into the Folio automatically — routing, guides, and notes in one place.</span></div></div>
+            <div class="st"><div class="sn">Folio</div><div class="sd"><b>Compiles the Travel Folio</b><span>Once the planning team confirms the route, Safari Crux assembles it into the Folio automatically. Routing, guides, and notes in one place.</span></div></div>
           </div>
         </div>
         <div class="reveal">
           <div class="chatMock ticked">
-            <div class="cm-head"><span class="cm-dot"></span>Safari Crux — Wild &amp; Co Safaris</div>
+            <div class="cm-head"><span class="cm-dot"></span>Safari Crux, Wild &amp; Co Safaris</div>
             <div class="cm-body">
-              <div class="bubble user">Two families, ten days, want the migration and real guiding — not a lodge circuit.</div>
+              <div class="bubble user">Two families, ten days, want the migration and real guiding, not a lodge circuit.</div>
               <div class="bubble agent">Draft routing: Little DumaTau for lagoon game viewing, then a second camp for the migration window. Same guiding team both stops. Want the full itinerary?</div>
-              <div class="bubble user">Yes — send it to the folio.</div>
+              <div class="bubble user">Yes, send it to the folio.</div>
             </div>
-            <div class="cm-foot">Image placeholder — product interface preview</div>
+            <div class="cm-foot">Image placeholder, product interface preview</div>
           </div>
         </div>
       </div>
@@ -1237,15 +1259,15 @@
   <!-- TRAVEL FOLIO -->
   <section class="folioSection">
     <div class="wrap">
-      <div class="panelHead" style="margin-bottom:0;"><span class="pnum" style="color:var(--sand);">05</span><span class="plabel" style="color:var(--sand);">After the Trip — The Travel Folio</span></div>
+      <div class="panelHead" style="margin-bottom:0;"><span class="pnum" style="color:var(--sand);">05</span><span class="plabel" style="color:var(--sand);">After the Trip: The Travel Folio</span></div>
       <div class="head reveal" style="margin-top:24px; max-width:640px;">
         <h2>The Travel Folio.</h2>
-        <p>Where the digital age meets journey design — a record built to be reopened, not filed away.</p>
+        <p>Where the digital age meets journey design, a record built to be reopened, not filed away.</p>
       </div>
       <div class="folioGrid">
         <div class="reveal">
-          <p>Every safari planned through Wild &amp; Co Safaris closes with a Travel Folio — the full routing, the camps, the guiding, and the reasoning behind each leg, kept in one place.</p>
-          <p>It stays on the shelf long after the trip ends — the record you hand a friend planning their first safari, not a PDF that gets deleted.</p>
+          <p>Every safari planned through Wild &amp; Co Safaris closes with a Travel Folio, the full routing, the camps, the guiding, and the reasoning behind each leg, kept in one place.</p>
+          <p>It stays on the shelf long after the trip ends. The record you hand a friend planning their first safari, not a PDF that gets deleted.</p>
           <div class="folioList">
             <div class="fi"><b>The Routing</b><span>Every camp and leg, dated, with the Ledger dossier attached.</span></div>
             <div class="fi"><b>Guide &amp; Camp Notes</b><span>Who guided which leg and why that pairing was made.</span></div>
@@ -1256,7 +1278,7 @@
           <div class="folioBook ticked">
             <div class="fb-mark">W</div>
             <div class="fb-title">The Travel Folio</div>
-            <div class="fb-sub">Image placeholder — folio cover mockup</div>
+            <div class="fb-sub">Image placeholder, folio cover mockup</div>
           </div>
         </div>
       </div>
@@ -1268,22 +1290,22 @@
     <div class="wrap">
       <div class="panelHead" style="margin-bottom:0;"><span class="pnum" style="color:var(--sand);">06</span><span class="plabel" style="color:var(--sand);">What We're Launching</span></div>
       <div class="head reveal" style="margin-top:24px; max-width:640px;">
-        <h2>Launching in 2026 — for trade and for travelers.</h2>
+        <h2>Launching in 2026, for trade and for travelers.</h2>
         <p>Three things opening up across Wild &amp; Co Safaris this year.</p>
       </div>
       <div class="launchGrid reveal">
         <div class="launchCard">
-          <div class="tag2">Trade — 2026</div>
+          <div class="tag2">Trade, 2026</div>
           <h4>Itinerary Builder</h4>
           <p>A direct tool for advisors to request and shape custom African routings alongside our planning team, rather than choosing from fixed packages.</p>
         </div>
         <div class="launchCard">
-          <div class="tag2">Traveler — 2026</div>
+          <div class="tag2">Traveler, 2026</div>
           <h4>Signature Routes</h4>
           <p>A small set of founder-designed multi-camp itineraries, each tied to a specific reason it was built, opening for booking.</p>
         </div>
         <div class="launchCard">
-          <div class="tag2">Both — 2026</div>
+          <div class="tag2">Both, 2026</div>
           <h4>New Ground Partners</h4>
           <p>Expanding guiding and camp relationships in 2026, added at the same deliberate pace as every other entry in the Ledger.</p>
         </div>
@@ -1302,8 +1324,8 @@
         </div>
         <div class="reveal">
           <div class="yearsStat"><span class="n">44</span><span class="l">Years in the Field</span></div>
-          <p>James Papagno has spent 44 years finding the places worth recommending — starting with a boat crossing to Eleuthera in 1982, and never really stopping since. Africa has been part of that record from early on, built through repeat visits and direct relationships with camps and guides rather than a single scouting trip.</p>
-          <p>Wild &amp; Co Safaris channels that experience into full itineraries — built the same way every entry in the Ledger is chosen: firsthand, first.</p>
+          <p>James Papagno has spent 44 years finding the places worth recommending, starting with a single-engine plane stuffed with surfboards for a one-week surf getaway to Eleuthera in 1982, and never really stopping since. Africa has been part of that record from early on, built through repeat visits and direct relationships with camps and guides rather than a single scouting trip.</p>
+          <p>Wild &amp; Co Safaris channels that experience into full itineraries, built the same way every entry in the Ledger is chosen: firsthand, first.</p>
         </div>
       </div>
     </div>
@@ -1315,12 +1337,12 @@
       <h2 class="reveal">Running camps, guiding, or ground logistics in Africa?</h2>
       <p class="sub reveal">We add a small number of new ground partners each year. Tell us about the operation and we'll be in touch if it's a fit.</p>
       <div class="ctaRow reveal">
-        <a href="mailto:ADD-EMAIL-HERE?subject=Wild%20%26%20Co%20Safaris%20—%20Partner%20Enquiry" class="btn">Enquire as an Operator</a>
+        <a href="mailto:james@wildearthstay.com?subject=Wild%20%26%20Co%20Safaris%3A%20Partner%20Enquiry" class="btn">Enquire as an Operator</a>
         <a href="./wild-earth-stays" class="btn outline">View Wild Earth Stays</a>
       </div>
       <div class="contactRow reveal">
-        <div>Email<strong><a href="mailto:ADD-EMAIL-HERE">Add email</a></strong></div>
-        <div>Phone / WhatsApp<strong><a href="tel:ADD-PHONE-HERE">Add phone</a></strong></div>
+        <div>Email<strong><a href="mailto:james@wildearthstay.com">james@wildearthstay.com</a></strong></div>
+        <div>Phone / WhatsApp<strong><a href="tel:+15614796355">1.561.479.6355</a></strong></div>
         <div>In Nassau for ILTM<strong>By appointment</strong></div>
       </div>
     </div>
@@ -1329,11 +1351,20 @@
 </main>
 
 <footer class="site" id="connect">
-  <div class="wrap footGrid">
-    <div>THE LEDGER — FILED AUG 2026 — NEXT REVIEW 2028</div>
-    <div class="sig">J. Wild</div>
-    <div>© James Wild &amp; Company — Journeys curated. Trust earned.</div>
+  <div class="wrap footBrand">
+    <img src="./assets/hare-stamp.png" alt="James Wild & Co">
+    <div class="footContact">
+      <a href="mailto:james@wildearthstay.com">james@wildearthstay.com</a>
+      <a href="tel:+15614796355">1.561.479.6355</a>
+      <a href="https://www.wildearthstay.com" target="_blank" rel="noopener">www.wildearthstay.com</a>
+    </div>
   </div>
+  <div class="wrap footGrid">
+    <div>THE LEDGER, FILED AUG 2026, NEXT REVIEW 2028</div>
+    <div class="sig">J. Wild</div>
+    <div>© James Wild &amp; Company. Journeys curated. Trust earned.</div>
+  </div>
+  <div class="wrap footLegal">IATAN #10783883 &nbsp;·&nbsp; FL Seller of Travel: ST45327</div>
 </footer>
 
 <script>

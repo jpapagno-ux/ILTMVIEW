@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wild Earth Stays — James Wild &amp; Company</title>
-<meta name="description" content="Wild Earth Stays — the global archive of remarkable places. A B2B overview for trade partners.">
+<title>Wild Earth Stays: James Wild &amp; Company</title>
+<meta name="description" content="Wild Earth Stays: the global archive of remarkable places. A B2B overview for trade partners.">
 <link rel="icon" type="image/png" href="./assets/logo-seal.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,7 +81,14 @@
   .hr-strong{border:0; border-top:var(--rule-strong); margin:0;}
 
   /* ---------- NAV ---------- */
-  header.site{
+    .navTop{
+    display:flex; justify-content:center; align-items:center;
+    padding:16px 0;
+    border-bottom:1px solid rgba(43,43,43,0.08);
+  }
+  .navTop img{height:56px; width:auto; display:block;}
+
+header.site{
     position:sticky; top:0; z-index:50;
     background:rgba(242,238,230,0.92);
     backdrop-filter:blur(6px);
@@ -89,8 +96,8 @@
   }
   .nav{
     max-width:var(--max); margin:0 auto; padding:0 var(--edge);
-    display:flex; align-items:center; justify-content:space-between;
-    height:64px;
+    display:flex; align-items:center; justify-content:center;
+    height:56px; position:relative;
   }
   .brand-mark{
     display:flex; align-items:center; gap:11px;
@@ -144,7 +151,7 @@
     background:transparent; color:var(--charcoal);
   }
   .btn.outline:hover{background:var(--charcoal); color:var(--paper);}
-  .navToggle{display:none;}
+  .navToggle{display:none; position:absolute; right:var(--edge); top:50%; transform:translateY(-50%);}
 
   /* ---------- FOUNDER WELCOME ---------- */
   .welcome{
@@ -468,7 +475,7 @@
     .reveal{opacity:1; transform:none; transition:none;}
   }
 
-  /* ================= LANDING — PLATFORM CHOOSER ================= */
+  /* ================= LANDING - PLATFORM CHOOSER ================= */
   .chooser{padding:70px 0 100px;}
   .chooser .head{max-width:640px; margin-bottom:8px;}
   .chooser .head p{margin-top:16px; font-size:16px; color:#3f3f3f; max-width:56ch;}
@@ -609,7 +616,7 @@
   }
   .watermark svg{width:100%; height:100%; display:block;}
 
-  /* ledger section divider — double rule with center mark */
+  /* ledger section divider - double rule with center mark */
   .ledgerDivider{
     display:flex; align-items:center; gap:14px;
     padding:0 var(--edge); max-width:var(--max); margin:0 auto;
@@ -619,7 +626,7 @@
     width:7px; height:7px; border:1px solid var(--clay); transform:rotate(45deg); flex:none;
   }
 
-  /* corner tick marks on cards — archival dossier feel */
+  /* corner tick marks on cards - archival dossier feel */
   .ticked{position:relative;}
   .ticked::before, .ticked::after{
     content:""; position:absolute; width:9px; height:9px;
@@ -653,14 +660,14 @@
   }
   .ledgerCard .lc-stampWrap{position:absolute; top:24px; right:24px; width:78px; height:78px;}
 
-  /* ---- Ledger Lanes — native 4-card grid ---- */
+  /* ---- Ledger Lanes - native 4-card grid ---- */
   .lanesGrid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(43,43,43,0.18); border:var(--rule);}
   .laneCard{background:var(--paper); padding:28px 22px;}
   .laneCard .ln{font-family:var(--mono); font-size:10.5px; color:var(--oxblood); margin-bottom:10px;}
   .laneCard h4{font-family:var(--display); font-weight:400; font-size:18px; margin:0 0 10px;}
   .laneCard p{margin:0; font-size:13.5px; color:#3f3f3f;}
 
-  /* ---- Ship's log strip — native route/timeline ---- */
+  /* ---- Ship's log strip - native route/timeline ---- */
   .shipsLog{margin-top:8px;}
   .shipsLog .route{
     display:flex; align-items:flex-start; overflow-x:auto; gap:0; padding-bottom:6px;
@@ -912,16 +919,31 @@
   .sg-item .sg-cap b{display:block; font-family:var(--serif); font-weight:700; font-size:13px; color:var(--charcoal); margin-bottom:1px;}
   .sg-hint{font-family:var(--mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--sand); margin-top:2px;}
 
+  .footBrand{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;
+    padding-bottom:26px; margin-bottom:26px; border-bottom:1px solid rgba(43,43,43,0.14);
+  }
+  .footBrand img{width:88px; flex:none;}
+  .footBrand .footContact{
+    display:flex; gap:28px; flex-wrap:wrap;
+    font-family:var(--mono); font-size:11px; color:var(--clay);
+  }
+  .footBrand .footContact a{color:var(--charcoal); text-decoration:none; border-bottom:1px solid var(--sand);}
+  .footBrand .footContact a:hover{color:var(--oxblood); border-color:var(--oxblood);}
+  .footLegal{
+    text-align:center; margin-top:18px;
+    font-family:var(--mono); font-size:9.5px; letter-spacing:0.04em; color:var(--sand);
+  }
+
 </style>
 </head>
 <body>
 
 <header class="site">
+  <div class="navTop">
+    <a href="./"><img src="./assets/hare-stamp.png" alt="James Wild & Co"></a>
+  </div>
   <div class="nav">
-    <a href="./" class="brand-mark">
-      <span class="coin">W</span>
-      <span class="word"><b>James Wild</b>&amp; Company</span>
-    </a>
     <nav class="links">
       <a href="./wild-earth-stays">Wild Earth Stays</a>
       <a href="./wild-co-safaris">Wild &amp; Co Safaris</a>
@@ -940,10 +962,10 @@
     <div class="wrap">
       <a href="./" class="backLink reveal">← All Platforms</a>
       <img src="./assets/wes-icon.svg" alt="Wild Earth Stays mark" class="reveal" style="width:130px; margin-bottom:24px;">
-      <div class="region reveal">Global — All Regions</div>
+      <div class="region reveal">Global · All Regions</div>
       <h1 class="reveal">Wild Earth Stays</h1>
       <div class="tag reveal">The archive of remarkable places, worldwide.</div>
-      <p class="sub reveal">A personal record of exceptional stays across every continent we work in — recorded, not listed. Every entry exists because someone from James Wild &amp; Company has actually stayed there, returned when it mattered, and put a name to why it made the cut.</p>
+      <p class="sub reveal">A personal record of exceptional stays across every continent we work in, recorded, not listed. Every entry exists because someone from James Wild &amp; Company has actually stayed there, returned when it mattered, and put a name to why it made the cut.</p>
       <div class="ctaRow reveal" style="margin-top:32px;">
         <a href="#partner" class="btn">Become a Partner</a>
         <a href="./brand-system#edit" class="btn outline">See a Case Study</a>
@@ -959,30 +981,30 @@
         <div class="sg-track">
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Aguas Claras</b>Entry No. 051 — Costa Rica</div>
+            <div class="sg-cap"><b>Aguas Claras</b>Entry No. 051, Costa Rica</div>
           </div>
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Icehotel</b>Entry No. 049 — Sweden</div>
+            <div class="sg-cap"><b>Icehotel</b>Entry No. 049, Sweden</div>
           </div>
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Explora Patagonia</b>Entry No. 050 — Chile</div>
+            <div class="sg-cap"><b>Explora Patagonia</b>Entry No. 050, Chile</div>
           </div>
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Kisawa Sanctuary</b>Entry No. 043 — Mozambique</div>
+            <div class="sg-cap"><b>Kisawa Sanctuary</b>Entry No. 043, Mozambique</div>
           </div>
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Benguerra Island</b>Entry No. 044 — Mozambique</div>
+            <div class="sg-cap"><b>Benguerra Island</b>Entry No. 044, Mozambique</div>
           </div>
           <div class="sg-item">
             <div class="sg-photo"><span>Photo placeholder</span></div>
-            <div class="sg-cap"><b>Little Kulala</b>Entry No. 048 — Namibia</div>
+            <div class="sg-cap"><b>Little Kulala</b>Entry No. 048, Namibia</div>
           </div>
           <div class="sg-item">
-            <div class="sg-photo" style="background:none; border:1.4px solid var(--charcoal);"><img src="./assets/photo-waterfall.jpg" alt="From the field — recent visit" style="width:100%; height:100%; object-fit:cover;"></div>
+            <div class="sg-photo" style="background:none; border:1.4px solid var(--charcoal);"><img src="./assets/photo-waterfall.jpg" alt="From the field, recent visit" style="width:100%; height:100%; object-fit:cover;"></div>
             <div class="sg-cap"><b>From the Field</b>James's notes, recent visit</div>
           </div>
         </div>
@@ -1001,7 +1023,7 @@
           <p>Every OTA and AI itinerary tool now returns the same twelve properties, reworded. When a client asks "have you actually been here," too many advisors are quoting a listing back at them.</p>
         </div>
         <div>
-          <p>Wild Earth Stays gives trade partners a firsthand-only archive to recommend from — with the dossier, the reasoning, and a name attached to every entry, so an advisor's recommendation carries the same weight as ours.</p>
+          <p>Wild Earth Stays gives trade partners a firsthand-only archive to recommend from: the dossier, the reasoning, and a name attached to every entry, so an advisor's recommendation carries the same weight as ours.</p>
           <p>Forty-four years of firsthand travel, opened up to trade for the first time in 2026.</p>
         </div>
       </div>
@@ -1014,13 +1036,13 @@
       <div class="panelHead"><span class="pnum">01a</span><span class="plabel">Why It's Different</span></div>
       <div class="head reveal">
         <h2>Not a marketplace. A record.</h2>
-        <p>Most stay platforms compete on inventory size. Wild Earth Stays does the opposite — the value is in what's been left out.</p>
+        <p>Most stay platforms compete on inventory size. Wild Earth Stays does the opposite. The value is in what's been left out.</p>
       </div>
       <div class="why-grid reveal">
         <div class="why-card">
           <div class="k">Personally Vetted</div>
           <h4>Visited before recorded</h4>
-          <p>Every entry is added after a firsthand stay. Jack's Camp — Entry No. 041 — has been visited six times since 1994 and is still under review.</p>
+          <p>Every entry is added after a firsthand stay. Jack's Camp, Entry No. 041, has been visited six times since 1994 and is still under review.</p>
         </div>
         <div class="why-card">
           <div class="k">No Marketplace Noise</div>
@@ -1042,13 +1064,13 @@
       <div class="panelHead"><span class="pnum">01b</span><span class="plabel">What It Offers</span></div>
       <div class="head reveal">
         <h2>Four things, working together.</h2>
-        <p>Not a booking engine with a blog attached — a planning system built around one archive.</p>
+        <p>Not a booking engine with a blog attached. A planning system built around one archive.</p>
       </div>
       <div class="offerList reveal">
-        <div class="item"><div class="ic">01</div><div><h4>The Ledger Archive</h4><p>Every stay recorded as a dossier — who visited, when, and why it earned its place.</p></div></div>
+        <div class="item"><div class="ic">01</div><div><h4>The Ledger Archive</h4><p>Every stay recorded as a dossier: who visited, when, and why it earned its place.</p></div></div>
         <div class="item"><div class="ic">02</div><div><h4>Direct Advisor Access</h4><p>A person on the other end of every enquiry, not a ticket queue.</p></div></div>
         <div class="item"><div class="ic">03</div><div><h4>IGGI, the Planning Agent</h4><p>Conversational planning that narrows the archive down to a shortlist, fast.</p></div></div>
-        <div class="item"><div class="ic">04</div><div><h4>The Travel Folio</h4><p>A digital record of the trip, built to be kept — not filed away after checkout.</p></div></div>
+        <div class="item"><div class="ic">04</div><div><h4>The Travel Folio</h4><p>A digital record of the trip, built to be kept, not filed away after checkout.</p></div></div>
       </div>
     </div>
   </section>
@@ -1060,14 +1082,14 @@
       <div class="head reveal" style="display:flex; align-items:flex-start; justify-content:space-between; gap:32px; flex-wrap:wrap;">
         <div>
           <h2>What it takes to enter the Ledger.</h2>
-          <p>We work with a small number of properties, deliberately. Most properties considered for the Ledger don't make it in — here's what we're actually looking for.</p>
+          <p>We work with a small number of properties, deliberately. Most properties considered for the Ledger don't make it in. Here's what we're actually looking for.</p>
         </div>
-        <img src="./assets/hare-stamp.png" alt="James Wild & Co — Ledgered & Vetted" style="width:100px; flex:none;">
+        <img src="./assets/hare-stamp.png" alt="James Wild & Co, Ledgered & Vetted" style="width:100px; flex:none;">
       </div>
       <div class="criteriaList reveal">
         <div class="row">
           <div class="n">01</div>
-          <div><div class="t">Character over category</div><p class="d">A genuine point of view — not a checklist of amenities that reads the same as every other listing.</p></div>
+          <div><div class="t">Character over category</div><p class="d">A genuine point of view, not a checklist of amenities that reads the same as every other listing.</p></div>
         </div>
         <div class="row">
           <div class="n">02</div>
@@ -1079,7 +1101,7 @@
         </div>
         <div class="row">
           <div class="n">04</div>
-          <div><div class="t">Direct relationships</div><p class="d">We work straight with the property — no OTA-style booking layer sitting between us and where a client actually stays.</p></div>
+          <div><div class="t">Direct relationships</div><p class="d">We work straight with the property, no OTA-style booking layer sitting between us and where a client actually stays.</p></div>
         </div>
       </div>
     </div>
@@ -1088,10 +1110,10 @@
   <!-- SAMPLE LEDGER ENTRY -->
   <section class="twoColSection">
     <div class="wrap">
-      <div class="panelHead reveal"><span class="pnum">02</span><span class="plabel">What Wild Earth Stays Offers — A Live Entry</span></div>
+      <div class="panelHead reveal"><span class="pnum">02</span><span class="plabel">What Wild Earth Stays Offers: A Live Entry</span></div>
       <div class="head reveal">
         <h2>What a Wild Earth Stays dossier looks like.</h2>
-        <p>Not a listing with amenities checked off — a record, with a reason and a name attached to it. This is a real property already in the Wild Earth Stays portfolio, shown in the Ledger format.</p>
+        <p>Not a listing with amenities checked off. A record, with a reason and a name attached to it. This is a real property already in the Wild Earth Stays portfolio, shown in the Ledger format.</p>
       </div>
 
       <div class="dossier ticked reveal">
@@ -1122,7 +1144,7 @@
         </div>
 
         <div class="d-title">Aguas Claras</div>
-        <div class="d-loc">Playa Chiquita, Puerto Viejo — Caribbean Coast, Costa Rica — 9°38'N 82°43'W</div>
+        <div class="d-loc">Playa Chiquita, Puerto Viejo, Caribbean Coast, Costa Rica, 9°38'N 82°43'W</div>
 
         <div class="d-fields">
           <div>Recorded by<b>James Papagno</b></div>
@@ -1169,7 +1191,7 @@
             <tr><td>2-Bedroom Bungalow</td><td>4 guests</td><td>$953</td></tr>
             <tr><td>2-Bedroom Deluxe</td><td>4 guests, private plunge pool</td><td>$1,140</td></tr>
           </table>
-          <div class="mFoot">Filed from the current Wild Earth Stays rate sheet — confirm live rates before quoting.</div>
+          <div class="mFoot">Filed from the current Wild Earth Stays rate sheet. Confirm live rates before quoting.</div>
         </div>
 
         <div class="d-archive" style="margin-top:20px;">
@@ -1183,11 +1205,11 @@
       <div style="margin-top:32px;">
         <div class="panelHead reveal" style="margin-bottom:16px;"><span class="pnum">02a</span><span class="plabel">How Travelers See This Property</span></div>
         <div class="miniPreview reveal">
-          <div class="mp-bar"><span class="mp-dot"></span>wildearthstays.com/property/aguas-claras — traveler view</div>
-          <div class="mp-hero"><span>Photo placeholder — Aguas Claras hero image</span></div>
+          <div class="mp-bar"><span class="mp-dot"></span>wildearthstays.com/property/aguas-claras, traveler view</div>
+          <div class="mp-hero"><span>Photo placeholder, Aguas Claras hero image</span></div>
           <div class="mp-body">
             <h5>Aguas Claras</h5>
-            <p>Welcome to the jungle. A soulful Caribbean escape where art, nature, and comfort meet on Costa Rica's Playa Chiquita — recommended because James has stayed here, not because it topped a search.</p>
+            <p>Welcome to the jungle. A soulful Caribbean escape where art, nature, and comfort meet on Costa Rica's Playa Chiquita, recommended because James has stayed here, not because it topped a search.</p>
             <div class="mp-cta">Enquire About This Stay</div>
           </div>
         </div>
@@ -1204,22 +1226,22 @@
           <div class="agentBadge">Wild Earth Stays</div>
           <h3>Meet IGGI.</h3>
           <div class="role">The conversational planning agent for Wild Earth Stays.</div>
-          <p>IGGI doesn't book, and it doesn't pretend to be James. It's the layer between a traveler's first message and a human advisor's final say — built to plan, organize, and hand off a trip that's already taken shape.</p>
+          <p>IGGI doesn't book, and it doesn't pretend to be James. It's the layer between a traveler's first message and a human advisor's final say. Built to plan, organize, and hand off a trip that's already taken shape.</p>
           <div class="agentSteps">
-            <div class="st"><div class="sn">Plan</div><div class="sd"><b>Turns a brief into a shortlist</b><span>Asks the follow-up questions a good advisor would — pace, privacy, season, past trips — then searches only recorded Ledger entries.</span></div></div>
+            <div class="st"><div class="sn">Plan</div><div class="sd"><b>Turns a brief into a shortlist</b><span>Asks the follow-up questions a good advisor would: pace, privacy, season, past trips, then searches only recorded Ledger entries.</span></div></div>
             <div class="st"><div class="sn">Organize</div><div class="sd"><b>Builds the working itinerary</b><span>Sequences stays, flags timing conflicts, and keeps every dossier, note, and reason attached as the plan takes shape.</span></div></div>
-            <div class="st"><div class="sn">Folio</div><div class="sd"><b>Compiles the Travel Folio</b><span>Once a human advisor confirms the plan, IGGI assembles it into the Folio automatically — nothing re-typed, nothing lost.</span></div></div>
+            <div class="st"><div class="sn">Folio</div><div class="sd"><b>Compiles the Travel Folio</b><span>Once a human advisor confirms the plan, IGGI assembles it into the Folio automatically. Nothing re-typed, nothing lost.</span></div></div>
           </div>
         </div>
         <div class="reveal">
           <div class="chatMock ticked">
-            <div class="cm-head"><span class="cm-dot"></span>IGGI — Wild Earth Stays</div>
+            <div class="cm-head"><span class="cm-dot"></span>IGGI, Wild Earth Stays</div>
             <div class="cm-body">
-              <div class="bubble user">Somewhere remote, cold-weather, nothing crowded — end of January.</div>
-              <div class="bubble agent">Three entries fit that window. Icehotel, Sweden is the strongest match — rebuilt fresh each season, no repeat guests overlapping. Want the full dossier?</div>
-              <div class="bubble user">Yes — and add it to my folio.</div>
+              <div class="bubble user">Somewhere remote, cold-weather, nothing crowded, end of January.</div>
+              <div class="bubble agent">Three entries fit that window. Icehotel, Sweden is the strongest match, rebuilt fresh each season, no repeat guests overlapping. Want the full dossier?</div>
+              <div class="bubble user">Yes, and add it to my folio.</div>
             </div>
-            <div class="cm-foot">Image placeholder — product interface preview</div>
+            <div class="cm-foot">Image placeholder, product interface preview</div>
           </div>
         </div>
       </div>
@@ -1229,18 +1251,18 @@
   <!-- TRAVEL FOLIO -->
   <section class="folioSection">
     <div class="wrap">
-      <div class="panelHead" style="margin-bottom:0;"><span class="pnum" style="color:var(--sand);">05</span><span class="plabel" style="color:var(--sand);">After the Trip — The Travel Folio</span></div>
+      <div class="panelHead" style="margin-bottom:0;"><span class="pnum" style="color:var(--sand);">05</span><span class="plabel" style="color:var(--sand);">After the Trip: The Travel Folio</span></div>
       <div class="head reveal" style="margin-top:24px; max-width:640px;">
         <h2>The Travel Folio.</h2>
-        <p>Where the digital age meets journey design — a record built to be reopened, not filed away.</p>
+        <p>Where the digital age meets journey design, a record built to be reopened, not filed away.</p>
       </div>
       <div class="folioGrid">
         <div class="reveal">
-          <p>Every trip planned through Wild Earth Stays closes with a Travel Folio — a digital keepsake of the journey: where you stayed, what your advisor recommended and why, notes from the road, and space for your own.</p>
+          <p>Every trip planned through Wild Earth Stays closes with a Travel Folio, a digital keepsake of the journey: where you stayed, what your advisor recommended and why, notes from the road, and space for your own.</p>
           <p>It stays on the shelf long after the trip ends, ready to reopen the next time you're deciding where to go back to.</p>
           <div class="folioList">
             <div class="fi"><b>The Itinerary</b><span>Every stay, dated, with the Ledger dossier attached.</span></div>
-            <div class="fi"><b>Advisor Notes</b><span>Why each recommendation was made — kept, not lost in an email thread.</span></div>
+            <div class="fi"><b>Advisor Notes</b><span>Why each recommendation was made, kept, not lost in an email thread.</span></div>
             <div class="fi"><b>Field Notes</b><span>Space for the traveler's own record of the trip.</span></div>
           </div>
         </div>
@@ -1248,7 +1270,7 @@
           <div class="folioBook ticked">
             <div class="fb-mark">W</div>
             <div class="fb-title">The Travel Folio</div>
-            <div class="fb-sub">Image placeholder — folio cover mockup</div>
+            <div class="fb-sub">Image placeholder, folio cover mockup</div>
           </div>
         </div>
       </div>
@@ -1260,22 +1282,22 @@
     <div class="wrap">
       <div class="panelHead" style="margin-bottom:0;"><span class="pnum" style="color:var(--sand);">06</span><span class="plabel" style="color:var(--sand);">What We're Launching</span></div>
       <div class="head reveal" style="margin-top:24px; max-width:640px;">
-        <h2>Launching in 2026 — for trade and for travelers.</h2>
+        <h2>Launching in 2026, for trade and for travelers.</h2>
         <p>Three things opening up across Wild Earth Stays this year.</p>
       </div>
       <div class="launchGrid reveal">
         <div class="launchCard">
-          <div class="tag2">Trade — 2026</div>
+          <div class="tag2">Trade, 2026</div>
           <h4>Advisor Access</h4>
           <p>Direct access to full Ledger dossiers, priority holds, and a single point of contact for trade partners working with our properties.</p>
         </div>
         <div class="launchCard">
-          <div class="tag2">Traveler — 2026</div>
+          <div class="tag2">Traveler, 2026</div>
           <h4>The Ledger, Live</h4>
-          <p>The archive rebuilt as a public site — real dossiers, real entries, direct enquiry, replacing the current listings-style site.</p>
+          <p>The archive rebuilt as a public site: real dossiers, real entries, direct enquiry, replacing the current listings-style site.</p>
         </div>
         <div class="launchCard">
-          <div class="tag2">Both — 2026</div>
+          <div class="tag2">Both, 2026</div>
           <h4>New Entries</h4>
           <p>A slate of new properties entering the archive in 2026, expanding coverage beyond the current 89 recorded entries.</p>
         </div>
@@ -1294,7 +1316,7 @@
         </div>
         <div class="reveal">
           <div class="yearsStat"><span class="n">44</span><span class="l">Years in the Field</span></div>
-          <p>James Papagno has spent 44 years finding the places worth recommending — starting with a boat crossing to Eleuthera in 1982, and never really stopping since. He has personally stayed at the majority of properties recorded in the Ledger, returning to many of them repeatedly rather than checking them off once and moving on.</p>
+          <p>James Papagno has spent 44 years finding the places worth recommending, starting with a single-engine plane stuffed with surfboards for a one-week surf getaway to Eleuthera in 1982, and never really stopping since. He has personally stayed at the majority of properties recorded in the Ledger, returning to many of them repeatedly rather than checking them off once and moving on.</p>
           <p>Wild Earth Stays is the result of that habit, formalized: a record built from firsthand time on the ground, not submissions, and not a site visit arranged around a press trip.</p>
         </div>
       </div>
@@ -1307,12 +1329,12 @@
       <h2 class="reveal">Think your property belongs in the Ledger?</h2>
       <p class="sub reveal">We review a small number of new entries each year. Tell us about the property and we'll let you know if a visit makes sense.</p>
       <div class="ctaRow reveal">
-        <a href="mailto:ADD-EMAIL-HERE?subject=Wild%20Earth%20Stays%20—%20Partner%20Enquiry" class="btn">Enquire as a Property</a>
+        <a href="mailto:james@wildearthstay.com?subject=Wild%20Earth%20Stays%3A%20Partner%20Enquiry" class="btn">Enquire as a Property</a>
         <a href="./wild-co-safaris" class="btn outline">View Wild &amp; Co Safaris</a>
       </div>
       <div class="contactRow reveal">
-        <div>Email<strong><a href="mailto:ADD-EMAIL-HERE">Add email</a></strong></div>
-        <div>Phone / WhatsApp<strong><a href="tel:ADD-PHONE-HERE">Add phone</a></strong></div>
+        <div>Email<strong><a href="mailto:james@wildearthstay.com">james@wildearthstay.com</a></strong></div>
+        <div>Phone / WhatsApp<strong><a href="tel:+15614796355">1.561.479.6355</a></strong></div>
         <div>In Nassau for ILTM<strong>By appointment</strong></div>
       </div>
     </div>
@@ -1321,11 +1343,20 @@
 </main>
 
 <footer class="site" id="connect">
-  <div class="wrap footGrid">
-    <div>THE LEDGER — FILED AUG 2026 — NEXT REVIEW 2028</div>
-    <div class="sig">J. Wild</div>
-    <div>© James Wild &amp; Company — Journeys curated. Trust earned.</div>
+  <div class="wrap footBrand">
+    <img src="./assets/hare-stamp.png" alt="James Wild & Co">
+    <div class="footContact">
+      <a href="mailto:james@wildearthstay.com">james@wildearthstay.com</a>
+      <a href="tel:+15614796355">1.561.479.6355</a>
+      <a href="https://www.wildearthstay.com" target="_blank" rel="noopener">www.wildearthstay.com</a>
+    </div>
   </div>
+  <div class="wrap footGrid">
+    <div>THE LEDGER, FILED AUG 2026, NEXT REVIEW 2028</div>
+    <div class="sig">J. Wild</div>
+    <div>© James Wild &amp; Company. Journeys curated. Trust earned.</div>
+  </div>
+  <div class="wrap footLegal">IATAN #10783883 &nbsp;·&nbsp; FL Seller of Travel: ST45327</div>
 </footer>
 
 <script>

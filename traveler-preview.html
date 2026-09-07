@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Traveler Landing Page Preview — James Wild &amp; Company</title>
+<title>Traveler Landing Page Preview: James Wild &amp; Company</title>
 <meta name="description" content="A preview of the traveler-facing landing page for James Wild & Company.">
 <link rel="icon" type="image/png" href="./assets/logo-seal.png">
 
@@ -81,7 +81,14 @@
   .hr-strong{border:0; border-top:var(--rule-strong); margin:0;}
 
   /* ---------- NAV ---------- */
-  header.site{
+    .navTop{
+    display:flex; justify-content:center; align-items:center;
+    padding:16px 0;
+    border-bottom:1px solid rgba(43,43,43,0.08);
+  }
+  .navTop img{height:56px; width:auto; display:block;}
+
+header.site{
     position:sticky; top:0; z-index:50;
     background:rgba(242,238,230,0.92);
     backdrop-filter:blur(6px);
@@ -89,8 +96,8 @@
   }
   .nav{
     max-width:var(--max); margin:0 auto; padding:0 var(--edge);
-    display:flex; align-items:center; justify-content:space-between;
-    height:64px;
+    display:flex; align-items:center; justify-content:center;
+    height:56px; position:relative;
   }
   .brand-mark{
     display:flex; align-items:center; gap:11px;
@@ -144,7 +151,7 @@
     background:transparent; color:var(--charcoal);
   }
   .btn.outline:hover{background:var(--charcoal); color:var(--paper);}
-  .navToggle{display:none;}
+  .navToggle{display:none; position:absolute; right:var(--edge); top:50%; transform:translateY(-50%);}
 
   /* ---------- FOUNDER WELCOME ---------- */
   .welcome{
@@ -468,7 +475,7 @@
     .reveal{opacity:1; transform:none; transition:none;}
   }
 
-  /* ================= LANDING — PLATFORM CHOOSER ================= */
+  /* ================= LANDING - PLATFORM CHOOSER ================= */
   .chooser{padding:70px 0 100px;}
   .chooser .head{max-width:640px; margin-bottom:8px;}
   .chooser .head p{margin-top:16px; font-size:16px; color:#3f3f3f; max-width:56ch;}
@@ -609,7 +616,7 @@
   }
   .watermark svg{width:100%; height:100%; display:block;}
 
-  /* ledger section divider — double rule with center mark */
+  /* ledger section divider - double rule with center mark */
   .ledgerDivider{
     display:flex; align-items:center; gap:14px;
     padding:0 var(--edge); max-width:var(--max); margin:0 auto;
@@ -619,7 +626,7 @@
     width:7px; height:7px; border:1px solid var(--clay); transform:rotate(45deg); flex:none;
   }
 
-  /* corner tick marks on cards — archival dossier feel */
+  /* corner tick marks on cards - archival dossier feel */
   .ticked{position:relative;}
   .ticked::before, .ticked::after{
     content:""; position:absolute; width:9px; height:9px;
@@ -653,14 +660,14 @@
   }
   .ledgerCard .lc-stampWrap{position:absolute; top:24px; right:24px; width:78px; height:78px;}
 
-  /* ---- Ledger Lanes — native 4-card grid ---- */
+  /* ---- Ledger Lanes - native 4-card grid ---- */
   .lanesGrid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(43,43,43,0.18); border:var(--rule);}
   .laneCard{background:var(--paper); padding:28px 22px;}
   .laneCard .ln{font-family:var(--mono); font-size:10.5px; color:var(--oxblood); margin-bottom:10px;}
   .laneCard h4{font-family:var(--display); font-weight:400; font-size:18px; margin:0 0 10px;}
   .laneCard p{margin:0; font-size:13.5px; color:#3f3f3f;}
 
-  /* ---- Ship's log strip — native route/timeline ---- */
+  /* ---- Ship's log strip - native route/timeline ---- */
   .shipsLog{margin-top:8px;}
   .shipsLog .route{
     display:flex; align-items:flex-start; overflow-x:auto; gap:0; padding-bottom:6px;
@@ -814,18 +821,33 @@
     .tAgentGrid{grid-template-columns:1fr;}
   }
 
+  .footBrand{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;
+    padding-bottom:26px; margin-bottom:26px; border-bottom:1px solid rgba(43,43,43,0.14);
+  }
+  .footBrand img{width:88px; flex:none;}
+  .footBrand .footContact{
+    display:flex; gap:28px; flex-wrap:wrap;
+    font-family:var(--mono); font-size:11px; color:var(--clay);
+  }
+  .footBrand .footContact a{color:var(--charcoal); text-decoration:none; border-bottom:1px solid var(--sand);}
+  .footBrand .footContact a:hover{color:var(--oxblood); border-color:var(--oxblood);}
+  .footLegal{
+    text-align:center; margin-top:18px;
+    font-family:var(--mono); font-size:9.5px; letter-spacing:0.04em; color:var(--sand);
+  }
+
 </style>
 </head>
 <body>
 
-<div class="previewBanner">This is a preview of the traveler-facing landing page — not the B2B deck. <a href="./">← Back to the partner overview</a></div>
+<div class="previewBanner">This is a preview of the traveler-facing landing page, not the B2B deck. <a href="./">← Back to the partner overview</a></div>
 
 <header class="site">
+  <div class="navTop">
+    <a href="./traveler-preview"><img src="./assets/hare-stamp.png" alt="James Wild & Co"></a>
+  </div>
   <div class="nav">
-    <a href="./traveler-preview" class="brand-mark">
-      <span class="coin">W</span>
-      <span class="word"><b>James Wild</b>&amp; Company</span>
-    </a>
     <nav class="links">
       <a href="#platforms2">Stays &amp; Safaris</a>
       <a href="#agents">Plan With Us</a>
@@ -841,9 +863,9 @@
   <!-- TRAVELER HERO -->
   <section class="tHero">
     <div class="wrap">
-      <div class="eyebrow2 reveal">James Wild &amp; Company — Since 1982</div>
+      <div class="eyebrow2 reveal">James Wild &amp; Company, Since 1982</div>
       <h1 class="reveal">We know a place for that.</h1>
-      <p class="sub reveal">Forty-four years of firsthand travel, recorded one stay at a time. Tell us what you're looking for — we'll show you what's actually earned its place, and help you plan it from there.</p>
+      <p class="sub reveal">Forty-four years of firsthand travel, recorded one stay at a time. Tell us what you're looking for. We'll show you what's actually earned its place, and help you plan it from there.</p>
       <div class="tagline reveal">I Know A Place ™</div>
     </div>
   </section>
@@ -853,20 +875,20 @@
     <div class="wrap">
       <div class="head reveal">
         <h2>Where are you headed?</h2>
-        <p style="margin-top:14px; color:#3f3f3f;">Two ways to plan with us — pick the one that fits the trip.</p>
+        <p style="margin-top:14px; color:#3f3f3f;">Two ways to plan with us, pick the one that fits the trip.</p>
       </div>
       <div class="tGrid reveal">
         <div class="tCard">
-          <div class="ph"><span>Photo placeholder<br>Wild Earth Stays — lifestyle image</span></div>
+          <div class="ph"><span>Photo placeholder<br>Wild Earth Stays, lifestyle image</span></div>
           <div class="tc-body">
             <div class="region2">Global Stays</div>
             <h3>Wild Earth Stays</h3>
-            <p>A stand-alone stay anywhere in the world — recorded firsthand, not pulled from a search ranking.</p>
+            <p>A stand-alone stay anywhere in the world, recorded firsthand, not pulled from a search ranking.</p>
             <div class="go2">Start Planning →</div>
           </div>
         </div>
         <div class="tCard">
-          <div class="ph"><span>Photo placeholder<br>Wild & Co Safaris — lifestyle image</span></div>
+          <div class="ph"><span>Photo placeholder<br>Wild & Co Safaris, lifestyle image</span></div>
           <div class="tc-body">
             <div class="region2">African Safaris</div>
             <h3>Wild &amp; Co Safaris</h3>
@@ -883,30 +905,30 @@
     <div class="wrap">
       <div class="head reveal" style="text-align:center; max-width:600px; margin:0 auto;">
         <h2>Plan with someone who actually knows.</h2>
-        <p style="margin-top:14px; color:#3f3f3f;">Every plan starts as a conversation — with an agent that only draws from places we've actually recorded, then a person who signs off on it.</p>
+        <p style="margin-top:14px; color:#3f3f3f;">Every plan starts as a conversation, with an agent that only draws from places we've actually recorded, then a person who signs off on it.</p>
       </div>
       <div class="tAgentGrid reveal">
         <div class="tAgentCard">
           <div class="agentBadge">Wild Earth Stays</div>
           <h4>IGGI</h4>
-          <p>Tell IGGI what you're after — pace, privacy, season — and it narrows the full archive down to a shortlist worth a real look.</p>
+          <p>Tell IGGI what you're after: pace, privacy, season, and it narrows the full archive down to a shortlist worth a real look.</p>
           <div class="chatMock ticked" style="margin-top:18px;">
             <div class="cm-head"><span class="cm-dot"></span>IGGI</div>
             <div class="cm-body">
               <div class="bubble user">Somewhere quiet, cold, end of January.</div>
-              <div class="bubble agent">Icehotel, Sweden fits — rebuilt fresh each season. Want the full story?</div>
+              <div class="bubble agent">Icehotel, Sweden fits, rebuilt fresh each season. Want the full story?</div>
             </div>
           </div>
         </div>
         <div class="tAgentCard">
           <div class="agentBadge">Wild &amp; Co Safaris</div>
           <h4>Safari Crux</h4>
-          <p>Give Safari Crux the brief — who's traveling, what matters most — and get a real multi-camp routing draft back, not a fixed package.</p>
+          <p>Give Safari Crux the brief: who's traveling, what matters most, and get a real multi-camp routing draft back, not a fixed package.</p>
           <div class="chatMock ticked" style="margin-top:18px;">
             <div class="cm-head"><span class="cm-dot"></span>Safari Crux</div>
             <div class="cm-body">
               <div class="bubble user">Ten days, want the migration, real guiding.</div>
-              <div class="bubble agent">Draft routing ready — migration timing plus one owner-operated camp. Want to see it?</div>
+              <div class="bubble agent">Draft routing ready, migration timing plus one owner-operated camp. Want to see it?</div>
             </div>
           </div>
         </div>
@@ -919,18 +941,18 @@
     <div class="wrap">
       <div class="head reveal" style="max-width:640px;">
         <h2>Everything ends up in your Travel Folio.</h2>
-        <p>Where the digital age meets journey design — the trip, kept, not filed away.</p>
+        <p>Where the digital age meets journey design, the trip, kept, not filed away.</p>
       </div>
       <div class="folioGrid">
         <div class="reveal">
-          <p>Every plan, every dossier, every note from your advisor lands in one place — built to reopen months or years later, not deleted the week you get home.</p>
+          <p>Every plan, every dossier, every note from your advisor lands in one place, built to reopen months or years later, not deleted the week you get home.</p>
           <p>It's the shelf copy of a trip you actually took.</p>
         </div>
         <div class="reveal">
           <div class="folioBook ticked">
             <div class="fb-mark">W</div>
             <div class="fb-title">The Travel Folio</div>
-            <div class="fb-sub">Image placeholder — folio cover mockup</div>
+            <div class="fb-sub">Image placeholder, folio cover mockup</div>
           </div>
         </div>
       </div>
@@ -943,7 +965,7 @@
       <h2 class="reveal">Ready to start?</h2>
       <p class="sub reveal">Tell us where you're headed, and we'll take it from there.</p>
       <div class="ctaRow reveal">
-        <a href="mailto:ADD-EMAIL-HERE?subject=Let%27s%20plan%20a%20trip" class="btn">Start Planning</a>
+        <a href="mailto:james@wildearthstay.com?subject=Let%27s%20plan%20a%20trip" class="btn">Start Planning</a>
         <a href="./" class="btn outline">← Back to Partner Overview</a>
       </div>
     </div>
@@ -952,11 +974,20 @@
 </main>
 
 <footer class="site">
-  <div class="wrap footGrid">
-    <div>THE LEDGER — FILED AUG 2026 — NEXT REVIEW 2028</div>
-    <div class="sig">J. Wild</div>
-    <div>© James Wild &amp; Company — Journeys curated. Trust earned.</div>
+  <div class="wrap footBrand">
+    <img src="./assets/hare-stamp.png" alt="James Wild & Co">
+    <div class="footContact">
+      <a href="mailto:james@wildearthstay.com">james@wildearthstay.com</a>
+      <a href="tel:+15614796355">1.561.479.6355</a>
+      <a href="https://www.wildearthstay.com" target="_blank" rel="noopener">www.wildearthstay.com</a>
+    </div>
   </div>
+  <div class="wrap footGrid">
+    <div>THE LEDGER, FILED AUG 2026, NEXT REVIEW 2028</div>
+    <div class="sig">J. Wild</div>
+    <div>© James Wild &amp; Company. Journeys curated. Trust earned.</div>
+  </div>
+  <div class="wrap footLegal">IATAN #10783883 &nbsp;·&nbsp; FL Seller of Travel: ST45327</div>
 </footer>
 
 <script>

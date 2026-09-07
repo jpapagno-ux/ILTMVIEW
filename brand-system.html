@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Ledger — Brand System | James Wild &amp; Company</title>
-<meta name="description" content="A proposal: Wild Earth Stays becomes James Wild & Company. The Ledger — a personal archive of remarkable places.">
+<title>The Ledger: Brand System | James Wild &amp; Company</title>
+<meta name="description" content="A proposal: Wild Earth Stays becomes James Wild & Company. The Ledger, a personal archive of remarkable places.">
 <link rel="icon" type="image/png" href="./assets/logo-seal.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,7 +81,14 @@
   .hr-strong{border:0; border-top:var(--rule-strong); margin:0;}
 
   /* ---------- NAV ---------- */
-  header.site{
+    .navTop{
+    display:flex; justify-content:center; align-items:center;
+    padding:16px 0;
+    border-bottom:1px solid rgba(43,43,43,0.08);
+  }
+  .navTop img{height:56px; width:auto; display:block;}
+
+header.site{
     position:sticky; top:0; z-index:50;
     background:rgba(242,238,230,0.92);
     backdrop-filter:blur(6px);
@@ -89,8 +96,8 @@
   }
   .nav{
     max-width:var(--max); margin:0 auto; padding:0 var(--edge);
-    display:flex; align-items:center; justify-content:space-between;
-    height:64px;
+    display:flex; align-items:center; justify-content:center;
+    height:56px; position:relative;
   }
   .brand-mark{
     display:flex; align-items:center; gap:11px;
@@ -144,7 +151,7 @@
     background:transparent; color:var(--charcoal);
   }
   .btn.outline:hover{background:var(--charcoal); color:var(--paper);}
-  .navToggle{display:none;}
+  .navToggle{display:none; position:absolute; right:var(--edge); top:50%; transform:translateY(-50%);}
 
   /* ---------- FOUNDER WELCOME ---------- */
   .welcome{
@@ -468,7 +475,7 @@
     .reveal{opacity:1; transform:none; transition:none;}
   }
 
-  /* ================= LANDING — PLATFORM CHOOSER ================= */
+  /* ================= LANDING - PLATFORM CHOOSER ================= */
   .chooser{padding:70px 0 100px;}
   .chooser .head{max-width:640px; margin-bottom:8px;}
   .chooser .head p{margin-top:16px; font-size:16px; color:#3f3f3f; max-width:56ch;}
@@ -609,7 +616,7 @@
   }
   .watermark svg{width:100%; height:100%; display:block;}
 
-  /* ledger section divider — double rule with center mark */
+  /* ledger section divider - double rule with center mark */
   .ledgerDivider{
     display:flex; align-items:center; gap:14px;
     padding:0 var(--edge); max-width:var(--max); margin:0 auto;
@@ -619,7 +626,7 @@
     width:7px; height:7px; border:1px solid var(--clay); transform:rotate(45deg); flex:none;
   }
 
-  /* corner tick marks on cards — archival dossier feel */
+  /* corner tick marks on cards - archival dossier feel */
   .ticked{position:relative;}
   .ticked::before, .ticked::after{
     content:""; position:absolute; width:9px; height:9px;
@@ -653,14 +660,14 @@
   }
   .ledgerCard .lc-stampWrap{position:absolute; top:24px; right:24px; width:78px; height:78px;}
 
-  /* ---- Ledger Lanes — native 4-card grid ---- */
+  /* ---- Ledger Lanes - native 4-card grid ---- */
   .lanesGrid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(43,43,43,0.18); border:var(--rule);}
   .laneCard{background:var(--paper); padding:28px 22px;}
   .laneCard .ln{font-family:var(--mono); font-size:10.5px; color:var(--oxblood); margin-bottom:10px;}
   .laneCard h4{font-family:var(--display); font-weight:400; font-size:18px; margin:0 0 10px;}
   .laneCard p{margin:0; font-size:13.5px; color:#3f3f3f;}
 
-  /* ---- Ship's log strip — native route/timeline ---- */
+  /* ---- Ship's log strip - native route/timeline ---- */
   .shipsLog{margin-top:8px;}
   .shipsLog .route{
     display:flex; align-items:flex-start; overflow-x:auto; gap:0; padding-bottom:6px;
@@ -814,16 +821,31 @@
     .tAgentGrid{grid-template-columns:1fr;}
   }
 
+  .footBrand{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;
+    padding-bottom:26px; margin-bottom:26px; border-bottom:1px solid rgba(43,43,43,0.14);
+  }
+  .footBrand img{width:88px; flex:none;}
+  .footBrand .footContact{
+    display:flex; gap:28px; flex-wrap:wrap;
+    font-family:var(--mono); font-size:11px; color:var(--clay);
+  }
+  .footBrand .footContact a{color:var(--charcoal); text-decoration:none; border-bottom:1px solid var(--sand);}
+  .footBrand .footContact a:hover{color:var(--oxblood); border-color:var(--oxblood);}
+  .footLegal{
+    text-align:center; margin-top:18px;
+    font-family:var(--mono); font-size:9.5px; letter-spacing:0.04em; color:var(--sand);
+  }
+
 </style>
 </head>
 <body>
 
 <header class="site">
+  <div class="navTop">
+    <a href="./"><img src="./assets/hare-stamp.png" alt="James Wild & Co"></a>
+  </div>
   <div class="nav">
-    <a href="./" class="brand-mark">
-      <span class="coin">W</span>
-      <span class="word"><b>James Wild</b>&amp; Company</span>
-    </a>
     <nav class="links">
       <a href="./wild-earth-stays">Wild Earth Stays</a>
       <a href="./wild-co-safaris">Wild &amp; Co Safaris</a>
@@ -845,12 +867,12 @@
       <img class="hero-stamp" src="./assets/logo-seal.png" alt="James Wild & Co. seal">
       <div class="entry reveal">
         <span class="no">Entry No. 000</span>
-        <span class="label">Proposal — Founder Review</span>
+        <span class="label">Proposal, Founder Review</span>
       </div>
       <div class="grid">
         <div class="reveal">
           <h1>Wild Earth Stays becomes <em>James Wild &amp; Company.</em></h1>
-          <p class="sub">A working proposal for a new brand and website architecture — replacing a destination catalogue with an editorial archive. Every stay, voyage and expedition recorded as an entry in <strong>The Ledger</strong>, and stamped only when it has earned its place.</p>
+          <p class="sub">A working proposal for a new brand and website architecture, replacing a destination catalogue with an editorial archive. Every stay, voyage and expedition recorded as an entry in <strong>The Ledger</strong>, and stamped only when it has earned its place.</p>
 
           <div class="meta">
             <div>Prepared for<strong>Wild Earth Stays</strong></div>
@@ -896,7 +918,7 @@
               <span class="lc-status">Founder Collection</span>
             </div>
             <div class="lc-title">Jack's Camp</div>
-            <div class="lc-loc">Makgadikgadi Salt Pans, Botswana — 20°30'S 25°10'E</div>
+            <div class="lc-loc">Makgadikgadi Salt Pans, Botswana, 20°30'S 25°10'E</div>
             <div class="lc-rule"></div>
             <div class="lc-rows">
               <div>Recorded by<b>James Papagno</b></div>
@@ -916,7 +938,7 @@
   <section class="quoteBand">
     <div class="wrap">
       <blockquote class="reveal">"The Ledger is not a catalogue. It is a record of places that deserve to be remembered."</blockquote>
-      <cite>— J. Wild, Founder</cite>
+      <cite>J. Wild, Founder</cite>
     </div>
   </section>
 
@@ -927,8 +949,8 @@
       <div class="briefGrid">
         <div class="col reveal">
           <h2>Why this exists.</h2>
-          <p style="margin-top:18px;">Wild Earth Stays already has the hard part — decades of firsthand travel, real relationships with the camps and lodges it recommends, and a founder who has actually stayed in every property on the site. What the current brand doesn't do is show that. It reads like inventory: destinations, filters, an enquiry button.</p>
-          <p>The proposal is simple. Stop presenting places and start recording them. Give every property a dossier, not a listing — who visited, when, what they found, whether it earned its place. Let the site's own structure, the stamps, the entry numbers, the ship's-log formatting, do the work of proving this is personal, not templated.</p>
+          <p style="margin-top:18px;">Wild Earth Stays already has the hard part: decades of firsthand travel, real relationships with the camps and lodges it recommends, and a founder who has actually stayed in every property on the site. What the current brand doesn't do is show that. It reads like inventory: destinations, filters, an enquiry button.</p>
+          <p>The proposal is simple. Stop presenting places and start recording them. Give every property a dossier, not a listing: who visited, when, what they found, whether it earned its place. Let the site's own structure, the stamps, the entry numbers, the ship's-log formatting, do the work of proving this is personal, not templated.</p>
           <div class="callout">
             <p>Not corporate. Personal. Experience over inventory. Truthful, not flowery. Curated, not crowded.</p>
           </div>
@@ -954,22 +976,22 @@
       <div class="entry"><span class="no">Entry No. 002</span><span class="label">The Mark</span></div>
       <div class="head reveal">
         <h2>One founder seal. Used everywhere, changed for no one.</h2>
-        <p>The mark carries the founder's own signature — not a generic monogram. It appears once as the master brand, and again, quietly, as the lockup used across print and formal placements.</p>
+        <p>The mark carries the founder's own signature, not a generic monogram. It appears once as the master brand, and again, quietly, as the lockup used across print and formal placements.</p>
       </div>
       <div class="logoGrid reveal">
         <div class="logoCard">
           <img src="./assets/logo-seal.png" alt="James Wild & Co. founder seal, 1982">
-          <div class="tag"><b>Founder Seal</b>Master brand mark — the signature, stamped.</div>
+          <div class="tag"><b>Founder Seal</b>Master brand mark, the signature, stamped.</div>
         </div>
         <div class="logoCard">
           <img src="./assets/logo-wordmark.png" alt="House of James Wild & Co wordmark lockup">
-          <div class="tag"><b>House of James Wild &amp; Co.</b>Formal lockup — print, partnerships, credentials.</div>
+          <div class="tag"><b>House of James Wild &amp; Co.</b>Formal lockup, print, partnerships, credentials.</div>
         </div>
       </div>
 
       <div class="head reveal" style="margin-top:56px; margin-bottom:0;">
         <h3 style="font-family:var(--display); font-weight:400; font-size:20px; margin-bottom:8px;">Platform marks.</h3>
-        <p>Each platform carries its own mark, subordinate to the founder seal — the same relationship a house has to the labels it publishes under.</p>
+        <p>Each platform carries its own mark, subordinate to the founder seal, the same relationship a house has to the labels it publishes under.</p>
       </div>
       <div class="logoGrid reveal" style="grid-template-columns:repeat(4,1fr); margin-top:28px;">
         <div class="logoCard" style="padding:28px;">
@@ -981,11 +1003,11 @@
           <div class="tag" style="color:var(--stone);"><b style="color:var(--paper);">Wild &amp; Co Safaris</b>Platform mark.</div>
         </div>
         <div class="logoCard" style="padding:28px;">
-          <img src="./assets/crux-logo-light.png" alt="CRUX — personal safari guide" style="max-width:100px;">
+          <img src="./assets/crux-logo-light.png" alt="CRUX, personal safari guide" style="max-width:100px;">
           <div class="tag"><b>CRUX</b>Safari planning agent.</div>
         </div>
         <div class="logoCard" style="padding:28px;">
-          <img src="./assets/hare-stamp.png" alt="James Wild & Co — Ledgered & Vetted" style="max-width:120px;">
+          <img src="./assets/hare-stamp.png" alt="James Wild & Co, Ledgered & Vetted" style="max-width:120px;">
           <div class="tag"><b>Ledgered &amp; Vetted</b>Trust badge, partner-facing.</div>
         </div>
       </div>
@@ -998,7 +1020,7 @@
       <div class="entry"><span class="no">Entry No. 003</span><span class="label">Palette &amp; Type</span></div>
       <div class="head reveal">
         <h2>Paper, not polish.</h2>
-        <p>Six tones pulled from field notebooks and ships' logs rather than a design trend board — and two typefaces doing very different jobs: one for authority, one for facts.</p>
+        <p>Six tones pulled from field notebooks and ships' logs rather than a design trend board, and two typefaces doing very different jobs: one for authority, one for facts.</p>
       </div>
 
       <div class="paletteRow reveal">
@@ -1012,12 +1034,12 @@
 
       <div class="typeGrid reveal">
         <div class="typeSpec">
-          <div class="name">Libre Caslon — Headings &amp; Titles</div>
+          <div class="name">Libre Caslon: Headings &amp; Titles</div>
           <div class="big">Aa Bb Cc</div>
-          <div class="use">Used for entry titles, pull quotes, and the founder's voice. Set loose, never bold for emphasis — italics carry the weight instead.</div>
+          <div class="use">Used for entry titles, pull quotes, and the founder's voice. Set loose, never bold for emphasis. Italics carry the weight instead.</div>
         </div>
         <div class="typeSpec mono">
-          <div class="name">Courier Prime — Data &amp; Details</div>
+          <div class="name">Courier Prime: Data &amp; Details</div>
           <div class="big">16°3'S 123°37'E</div>
           <div class="use">Used for coordinates, manifests, ship's-log entries and every stamp. Clear, functional, and deliberately unglamorous.</div>
         </div>
@@ -1031,28 +1053,28 @@
       <div class="entry"><span class="no">Entry No. 004</span><span class="label">The Ledger Lanes</span></div>
       <div class="head reveal">
         <h2>Four visual references, one system.</h2>
-        <p>The wordmark, the document, the archive, the printed object — the same four lanes recur across every touchpoint so the brand reads as one continuous record, not a set of separate assets.</p>
+        <p>The wordmark, the document, the archive, the printed object: the same four lanes recur across every touchpoint so the brand reads as one continuous record, not a set of separate assets.</p>
       </div>
       <div class="lanesGrid reveal">
         <div class="laneCard ticked">
           <div class="ln">1 · The Wordmark</div>
           <h4>Authority through letterform</h4>
-          <p>The name set alone, in Libre Caslon, with room to breathe. Authority through letterform and space — no icon required.</p>
+          <p>The name set alone, in Libre Caslon, with room to breathe. Authority through letterform and space. No icon required.</p>
         </div>
         <div class="laneCard ticked">
           <div class="ln">2 · The Document</div>
           <h4>Ruled and structured</h4>
-          <p>Manifests, ship's logs, and ledger pages. Facts carry the story — Courier Prime, tables, and honest margins.</p>
+          <p>Manifests, ship's logs, and ledger pages. Facts carry the story: Courier Prime, tables, and honest margins.</p>
         </div>
         <div class="laneCard ticked">
           <div class="ln">3 · The Archive</div>
           <h4>His negative, not stock</h4>
-          <p>Photography from the field — grain over gloss, contact sheets and Polaroids over stock libraries.</p>
+          <p>Photography from the field: grain over gloss, contact sheets and Polaroids over stock libraries.</p>
         </div>
         <div class="laneCard ticked">
           <div class="ln">4 · Print &amp; Object</div>
           <h4>Uncoated. Stamped. Handled.</h4>
-          <p>Luggage tags, wax seals, entry stamps — the physical objects the digital brand borrows its texture from.</p>
+          <p>Luggage tags, wax seals, entry stamps: the physical objects the digital brand borrows its texture from.</p>
         </div>
       </div>
     </div>
@@ -1063,17 +1085,17 @@
     <div class="wrap">
       <div class="entry"><span class="no">Entry No. 005</span><span class="label">The Editorial System</span></div>
       <div class="head reveal">
-        <h2>Beyond stays — the same voice for every voyage.</h2>
+        <h2>Beyond stays, the same voice for every voyage.</h2>
         <p>Expeditions get the same treatment as camps: a ship's log instead of an itinerary, navigation notes instead of a packing list, sightings instead of stock inclusions.</p>
       </div>
-      <p class="reveal" style="max-width:62ch; color:#333; margin-bottom:32px;">The Kimberley Expedition — Entry No. 112 — is recorded the same way as any stay, just in a different shape. Instead of an itinerary, a ship's log. Instead of a packing list, navigation notes. Instead of inclusions, sightings actually logged along the way.</p>
+      <p class="reveal" style="max-width:62ch; color:#333; margin-bottom:32px;">The Kimberley Expedition, Entry No. 112, is recorded the same way as any stay, just in a different shape. Instead of an itinerary, a ship's log. Instead of a packing list, navigation notes. Instead of inclusions, sightings actually logged along the way.</p>
       <div class="ledgerCard ticked reveal">
         <div class="lc-head">
           <span class="lc-entry">ENTRY No. 112</span>
-          <span class="lc-status">The Kimberley Expedition — Australia</span>
+          <span class="lc-status">The Kimberley Expedition, Australia</span>
         </div>
         <div class="lc-title" style="font-size:22px;">The Ship's Log</div>
-        <div class="lc-loc">Coral Discoverer — 11 Days — Broome to Darwin</div>
+        <div class="lc-loc">Coral Discoverer, 11 Days, Broome to Darwin</div>
         <div class="lc-rule"></div>
         <div class="shipsLog">
           <div class="route">
@@ -1119,7 +1141,7 @@
     <div class="wrap">
       <div class="caseHead">
         <div class="reveal">
-          <div class="entry" style="margin-bottom:14px;"><span class="no">Entry No. 041</span><span class="label">The Edit — Case Study</span></div>
+          <div class="entry" style="margin-bottom:14px;"><span class="no">Entry No. 041</span><span class="label">The Edit: Case Study</span></div>
           <h2>Jack's Camp, before and after.</h2>
         </div>
         <div class="stat reveal">
@@ -1128,17 +1150,17 @@
         </div>
       </div>
 
-      <p class="reveal" style="max-width:60ch; color:#3f3f3f; margin-bottom:8px;">One property, rebuilt end to end — new metadata fields, new components, the same photography doing more work because the copy around it finally sounds like someone who has actually been there.</p>
+      <p class="reveal" style="max-width:60ch; color:#3f3f3f; margin-bottom:8px;">One property, rebuilt end to end: new metadata fields, new components, the same photography doing more work because the copy around it finally sounds like someone who has actually been there.</p>
 
       <div class="fieldNote reveal" style="margin-top:32px;">
         "I've stayed in camps throughout Botswana, but Jack's Camp has a personality few others possess."
-        <cite>— J.W., field notes</cite>
+        <cite>J.W., field notes</cite>
       </div>
 
       <div class="caseCols reveal">
         <div>
           <div class="colHead">What the old page told you</div>
-          <p style="color:#333; margin:0 0 10px;">Nine tents, all-inclusive, year-round — specs and a book-now button. No sense of who's speaking or why this camp, specifically, made the list.</p>
+          <p style="color:#333; margin:0 0 10px;">Nine tents, all-inclusive, year-round: specs and a book-now button. No sense of who's speaking or why this camp, specifically, made the list.</p>
         </div>
         <div>
           <div class="colHead after">What the new page tells you</div>
@@ -1156,9 +1178,9 @@
         <span>EST. 1982</span>
       </div>
       <h2 class="reveal">Ready to open the next entry?</h2>
-      <p class="sub reveal">This deck covers the mark, the system and one full case study. The next step is a working prototype on the properties you choose — built on the same CMS, ready to hand back to your team.</p>
+      <p class="sub reveal">This deck covers the mark, the system and one full case study. The next step is a working prototype on the properties you choose, built on the same CMS, ready to hand back to your team.</p>
       <div class="ctaRow reveal">
-        <a href="mailto:ADD-EMAIL-HERE?subject=The%20Ledger%20—%20Let%27s%20talk" class="btn">Start the Conversation</a>
+        <a href="mailto:james@wildearthstay.com?subject=The%20Ledger%3A%20Let%27s%20talk" class="btn">Start the Conversation</a>
         <a href="./" class="btn outline">← Back to Platforms</a>
       </div>
     </div>
@@ -1167,11 +1189,20 @@
 </main>
 
 <footer class="site">
-  <div class="wrap footGrid">
-    <div>THE LEDGER — FILED AUG 2026 — NEXT REVIEW 2028</div>
-    <div class="sig">J. Wild</div>
-    <div>© James Wild &amp; Company — Journeys curated. Trust earned.</div>
+  <div class="wrap footBrand">
+    <img src="./assets/hare-stamp.png" alt="James Wild & Co">
+    <div class="footContact">
+      <a href="mailto:james@wildearthstay.com">james@wildearthstay.com</a>
+      <a href="tel:+15614796355">1.561.479.6355</a>
+      <a href="https://www.wildearthstay.com" target="_blank" rel="noopener">www.wildearthstay.com</a>
+    </div>
   </div>
+  <div class="wrap footGrid">
+    <div>THE LEDGER, FILED AUG 2026, NEXT REVIEW 2028</div>
+    <div class="sig">J. Wild</div>
+    <div>© James Wild &amp; Company. Journeys curated. Trust earned.</div>
+  </div>
+  <div class="wrap footLegal">IATAN #10783883 &nbsp;·&nbsp; FL Seller of Travel: ST45327</div>
 </footer>
 
 <script>
